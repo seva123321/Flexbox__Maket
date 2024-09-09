@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise BEM</title>
+    <link rel="shortcut icon" href="public/icons/Group.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__block">
+          <div class="block__all-menu block__all-menu--line">
+            <a href="#" class="all-menu__link">
+              <img src="public/icons/burger.svg" alt="Меню" class="all-menu__burger" />
+            </a>
+          </div>
+          <div class="block__logo">
+            <img src="public/icons/Group.svg" alt="Логотип" class="logo" />
+          </div>
+        </div>
+        <nav class="service">
+          <ul class="service__list service__list--big-screen">
+            <li class="service__item">
+              <a href="#" class="service__link">
+                <img src="public/icons/call.svg" alt="Телефон" class="link__icon" />
+              </a>
+            </li>
+            <li class="service__item">
+              <a href="#" class="service__link">
+                <img src="public/icons/chat.svg" alt="Почта" class="link__icon" />
+              </a>
+            </li>
+            <li class="service__item">
+              <a href="#" class="service__link">
+                <img src="public/icons/profile.svg" alt="Профиль" class="link__icon" />
+              </a>
+            </li>
+          </ul>
+          <ul class="service__list">
+            <li class="service__item service__item--line">
+              <div class="item__text">Оставить заявку</div>
+              <a href="#" class="service__link">
+                <img src="public/icons/repair.svg" alt="Оставить заявку" class="link__icon" />
+              </a>
+            </li>
+            <li class="service__item">
+              <div class="item__text">Статус ремонта</div>
+              <a href="#" class="service__link">
+                <img src="public/icons/checkstatus.svg" alt="Статус ремонта" class="link__icon" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <aticle class="content">
+          <nav class="nav">
+            <h1 class="nav__head">Услуги и сервисы</h1>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="item__link item__link--active"> Ремонтируемые устройства </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="item__link"> Дополнительные услуги </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="item__link"> Цены на услуги </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="item__link"> Адреса сервисных центров </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="item__link"> Специальные цены </a>
+              </li>
+            </ul>
+          </nav>
+          <section class="about">
+            <div class="about__inner">
+              <input class="about__read visibility-hidden" type="checkbox" id="read" />
+              <div class="about__content">
+                <p class="about__text">
+                  Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+                  отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                </p>
+                <p class="about__text">
+                  Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
+                  количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                  очередь, советуют нас родным и близким.
+                </p>
+                <p class="about__text">
+                  Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
+                  количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                  очередь, советуют нас родным и близким.
+                </p>
+                <p class="about__text">
+                  Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
+                  количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                  очередь, советуют нас родным и близким.
+                </p>
+                <p class="about__text">
+                  Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
+                  количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                  очередь, советуют нас родным и близким.
+                </p>
+              </div>
+              <div class="about__show-pannel">
+                <button class="about__check-box"></button>
+                <label for="read" class="about__label"> Читать Далее </label>
+              </div>
+            </div>
+
+            <div class="about__img"></div>
+          </section>
+        </aticle>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>
