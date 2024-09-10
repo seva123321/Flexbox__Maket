@@ -22,7 +22,9 @@ body {
   color: #1b1c21;
 }
 
-.wrapper {}
+.footer {
+  background-color: #f8f8f8;
+}
 
 .header {
   display: flex;
@@ -32,24 +34,11 @@ body {
   background-color: #fff;
 }
 
-.main {
-  background-color: #f8f8f8;
-}
-
-.footer {
-  background-color: #f8f8f8;
-}
-
 .header__block {
   display: flex;
   align-items: center;
 }
 
-.service {
-  display: flex;
-}
-
-.content {}
 
 .block__all-menu {
   padding: 8px;
@@ -66,8 +55,17 @@ body {
   }
 }
 
+.all-menu__link {
+  text-decoration: none;
+  display: contents;
+}
+
 .block__logo {
   padding: 8px;
+}
+
+.service {
+  display: flex;
 }
 
 .service__list {
@@ -84,19 +82,6 @@ body {
     display: flex;
   }
 }
-
-.nav {
-  margin-bottom: 24px;
-}
-
-.all-menu__link {
-  text-decoration: none;
-  display: contents;
-}
-
-.all-menu__burger {}
-
-.logo {}
 
 .service__item {
   display: flex;
@@ -129,6 +114,19 @@ body {
   }
 }
 
+.service__link {
+  text-decoration: none;
+  display: contents;
+}
+
+.main {
+  background-color: #f8f8f8;
+}
+
+.nav {
+  margin-bottom: 24px;
+}
+
 .nav__head {
   display: flex;
   align-items: center;
@@ -156,9 +154,39 @@ body {
   margin: 0 16px;
 }
 
+.nav__item {}
+
+.item__link {
+  text-decoration: none;
+  padding: 8px 16px;
+  display: inline-block;
+  white-space: nowrap;
+  color: #7e7e82;
+  font-family: "TT-Lakes--regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+.item__link:active,
+.item__link:focus,
+.item__link:hover {
+  border: 2px solid #b8ffec;
+  border-radius: 6px;
+}
+
+.item__link--active {
+  border: 2px solid #b8ffec;
+  border-radius: 6px;
+}
+
 .about {
   display: flex;
   flex-direction: column;
+}
+
+.about__inner {
+  padding: 16px;
 }
 
 @media screen and (min-width: 500px) {
@@ -177,17 +205,6 @@ body {
     height: 90px;
     height: 10vw;
   }
-}
-
-.about__inner {
-  padding: 16px;
-  /* margin-left: 8px; */
-  /* flex-grow: 1; */
-  /* max-width: 50vw; */
-}
-
-.about__read {
-  /* display: block !important; */
 }
 
 .about__read:checked + .about__content {
@@ -262,39 +279,6 @@ body {
     margin: 0 24px;
   }
 }
-
-.service__link {
-  text-decoration: none;
-  display: contents;
-}
-
-.item__link {
-  text-decoration: none;
-  padding: 8px 16px;
-  display: inline-block;
-  white-space: nowrap;
-  color: #7e7e82;
-  font-family: "TT-Lakes--regular", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 1px;
-}
-
-.item__link:active,
-.item__link:focus,
-.item__link:hover {
-  border: 2px solid #b8ffec;
-  border-radius: 6px;
-}
-
-.item__link--active {
-  border: 2px solid #b8ffec;
-  border-radius: 6px;
-}
-
-.nav__item {}
-
-.link__icon {}
 
 .visibility-hidden {
   position: absolute;
