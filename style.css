@@ -138,8 +138,16 @@ body {
   width: 4px;
   height: 40px;
   background-color: #41f6d7;
-  border-bottom-right-radius: 70%;
+  -webkit-border-top-right-radius: 70%;
+  -moz-border-top-right-radius: 70%;
+  -ms-border-top-right-radius: 70%;
+  -o-border-top-right-radius: 70%;
   border-top-right-radius: 70%;
+  -webkit-border-bottom-right-radius: 70%;
+  -moz-border-bottom-right-radius: 70%;
+  -ms-border-bottom-right-radius: 70%;
+  -o-border-bottom-right-radius: 70%;
+  border-bottom-right-radius: 70%;
   margin-right: 16px;
 }
 
@@ -166,11 +174,19 @@ body {
 .nav__link:focus,
 .nav__link:hover {
   border: 2px solid #b8ffec;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
   border-radius: 6px;
 }
 
 .nav__link--active {
   border: 2px solid #b8ffec;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
   border-radius: 6px;
 }
 
