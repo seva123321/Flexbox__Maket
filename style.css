@@ -63,6 +63,7 @@ body {
 
 .block__logo {
   padding: 8px;
+  display: inline-block;
 }
 
 .service {
@@ -133,17 +134,24 @@ body {
 
 .nav__head {
   display: flex;
+  position: relative;
   align-items: center;
   padding: 24px;
-  padding-left: 0px;
+  /* padding-left: 0px; */
 }
 
-.nav__head::before {
+.nav__head--left-line::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto 0;
   content: "";
   display: inline-block;
   display: inline-block;
   width: 4px;
-  height: 40px;
+  height: 32px;
   background-color: #41f6d7;
   -webkit-border-top-right-radius: 70%;
   -moz-border-top-right-radius: 70%;
