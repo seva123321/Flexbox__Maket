@@ -122,6 +122,8 @@ body {
 .link {
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
+  transition: transform .25s;
 }
 
 .main {

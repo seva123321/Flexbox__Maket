@@ -10,15 +10,15 @@
   <body>
     <aside class="aside">
       <header class="aside__header header">
-        <div>
-            <button class="close service__item">
+        <div class="aside__header--left-part">
+            <button class="close service__item btn">
                 <img src="public/icons/close.png" srcset="public/icons/close.svg" alt="Логотип"/>
             </button>
             <div class="block__logo service__item">
                 <img src="public/icons/Group.png" srcset="public/icons/Group.svg" alt="Логотип"/>
             </div>
         </div>
-        <div class="aside__search service__item">
+        <div class="aside__search service__item btn">
             <img src="public/icons/search.png" srcset="public/icons/search.svg" alt="Логотип"/>
         </div>
 
@@ -26,7 +26,7 @@
         <section class="aside__nav">
             <ul class="aside__list aside__list--vertical">
             <li class="aside__item item">
-                <a href="#" class="link aside__link nav__head--left-line aside__link--active">Ремонт техники</a>
+                <a href="#" class="link aside__link nav__head--left-line active--font aside__link--active">Ремонт техники</a>
             </li>
             <li class="aside__item item " >
                 <a href="#" class="link aside__link ">Услуги и сервисы</a>
@@ -55,17 +55,17 @@
             <div class="aside__contacts">
                 <ul class="aside__list">
                     <li class="list__contact">
-                        <a href="#" class="link">
+                        <a href="#" class="link btn">
                             <img src="public/icons/call.png" srcset="public/icons/call.svg" alt="Телефон" />
                         </a>
                     </li>
                     <li class="list__contact">
-                        <a href="#" class="link">
+                        <a href="#" class="link btn">
                             <img src="public/icons/chat.png" srcset="public/icons/chat.svg" alt="Телефон" />
                         </a>
                     </li>
                     <li class="list__contact">
-                        <a href="#" class="link">
+                        <a href="#" class="link btn">
                             <img src="public/icons/profile.png" srcset="public/icons/profile.svg" alt="Телефон" />
                         </a>
                     </li>
@@ -74,18 +74,29 @@
                 <a href="tel:+78008908900" class="aside__tel aside__link--font link"><span>8</span><span>800</span><span>890</span>8900</a>
             </div>
             <div class="lang-pannel">
-                <label for="lang_ru">
-                    <input class="lang-pannel__lang-elem active" type="radio" value="RU" name="language" id="lang_ru">
+               
+                <input class="lang-pannel__input visibility-hidden" type="radio"  name="language" id="lang_ru" checked>
+                <label for="lang_ru" class="lang-pannel__label">RU</label>
+                    
+                            
+                <input class="lang-pannel__input visibility-hidden" type="radio"  name="language" id="lang_en">
+                <label for="lang_en" class="lang-pannel__label">EN</label>
+                   
+                
+                <input class="lang-pannel__input visibility-hidden" type="radio"  name="language" id="lang_cn">
+                <label for="lang_cn" class="lang-pannel__label">CN</label>
+                <!-- <label  class="lang-pannel__label">
+                    <input class="lang-pannel__input " type="radio"  name="language" id="lang_ru" checked>
                     RU
                 </label>
-                <label for="lang_en">
-                    <input class="lang-pannel__lang-elem" type="radio" value="EN" name="language" id="lang_en">
+                <label  class="lang-pannel__label">
+                    <input class="lang-pannel__input " type="radio"  name="language" id="lang_en">
                     EN
                 </label>
-                <label for="lang_cn">
-                    <input class="lang-pannel__lang-elem" type="radio" value="CN" name="language" id="lang_cn">
+                <label  class="lang-pannel__label">
+                    <input class="lang-pannel__input " type="radio"  name="language" id="lang_cn">
                     CN
-                </label>
+                </label> -->
             </div>
         </footer>
     </aside>
