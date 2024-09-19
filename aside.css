@@ -1,66 +1,27 @@
-@font-face {
-  font-family: "TT-Lakes--regular";
-  src: url("public/fonts/TTLakesCompressed-Regular.eot");
-  src: local("TT Lakes Compressed Regular"), local("TTLakesCompressed-Regular"),
-    url("public/fonts/TTLakesCompressed-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("public/fonts/TTLakesCompressed-Regular.woff") format("woff"),
-    url("public/fonts/TTLakesCompressed-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
 .aside {
   width: 320px;
   /* height: 100vh; */
-  box-sizing: content-box;
   display: flex;
   flex-direction: column;
-  border: 2px solid #b8ffec;
-}
-.aside__header {
-  padding: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(-320px);
 }
 
-.aside__header--left-part {
-  display: flex;
-  align-items: center;
+.aside__header {
+  padding: 16px;
 }
 
 .service__item {
 }
 
-.close {
+.header__close {
 }
-.block__logo {
-  /* повтор*/
-  padding: 8px;
-  display: inline-block;
-}
+
 .aside__search {
 }
+
 .aside__nav {
   padding: 24px 0;
   flex-grow: 1;
@@ -73,17 +34,6 @@ button {
 
 .aside__list--vertical {
   flex-direction: column;
-}
-
-.aside__item {
-  /* padding: 8px; */
-}
-
-.link {
-  /* повтор*/
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
 }
 
 .aside__link {
@@ -115,12 +65,9 @@ button {
   animation-fill-mode: forwards;
 } */
 
-.active--font {
-  color: #7e7e82;
-}
-
 .aside__footer {
 }
+
 .aside__contacts {
   margin: 16px;
   margin-top: 0px;
@@ -129,7 +76,7 @@ button {
   flex-direction: column;
 }
 
-.list__contact {
+.aside__item {
   padding: 8px;
 }
 
@@ -138,15 +85,22 @@ button {
   font-family: "TT Lakes Compressed", sans-serif;
   font-size: 16px;
 }
+
+.active--font {
+  color: #7e7e82;
+}
+
 .aside__mail {
   padding: 8px;
   user-select: text;
 }
+
 .aside__tel {
   padding: 8px;
   font-weight: 600;
   font-size: 24px;
 }
+
 .aside__tel span {
   margin-right: 5px;
 }
@@ -175,7 +129,6 @@ button {
 .btn:hover,
 .btn:focus {
   opacity: 0.8;
- 
 }
 
 .btn:active {
@@ -185,6 +138,14 @@ button {
   -o-filter: brightness(0.5);
   filter: brightness(0.5);
 }
+
+/* .btn--burger:hover ~ .aside{
+  transform: translateX(320px);
+} */
+
+/* .block__all-menu:hover ~ .aside{
+  transform: translateX(320px);
+} */
 
 /* .lang-pannel__input:checked ~ .lang-pannel .lang-pannel__label{
   font-size: 30px;

@@ -25,6 +25,13 @@ html {
   padding: 0;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -41,7 +48,7 @@ body {
   background-color: #fff;
 }
 
-.header__block {
+.header__left-part {
   display: flex;
   align-items: center;
 }
@@ -61,7 +68,7 @@ body {
   }
 }
 
-.block__logo {
+.header__logo {
   padding: 8px;
   display: inline-block;
 }
