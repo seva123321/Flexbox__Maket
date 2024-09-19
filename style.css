@@ -23,6 +23,7 @@ html {
 * {
   margin: 0;
   padding: 0;
+  border:  2px solid red;
 }
 
 button {
@@ -66,6 +67,14 @@ body {
     background-color: #eaeaea;
     margin-left: 12px;
   }
+}
+
+.header__burger {
+}
+
+/* open aside  */
+.header__burger:checked + .aside {
+  transform: translateX(0px);
 }
 
 .header__logo {

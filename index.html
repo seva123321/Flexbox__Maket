@@ -12,10 +12,16 @@
       <header class="header">
         <div class="header__left-part">
           <div class="block__all-menu block__all-menu--line">
+            <!-- <input class="header__burger" type="radio" name="all-menu" id="burger"> -->
+            <label for="burger" class="link btn">
+              <img src="public/icons/burger.png" srcset="public/icons/burger.svg" alt="Меню"/>
+            </label>
+          </div>
+          <!-- <div class="block__all-menu block__all-menu--line">
             <a href="#" class="link btn btn--burger">
               <img src="public/icons/burger.png" srcset="public/icons/burger.svg" alt="Меню"/>
             </a>
-          </div>
+          </div> -->
           <div class="header__logo">
             <img src="public/icons/Group.png" srcset="public/icons/Group.svg" alt="Логотип"/>
           </div>
@@ -115,18 +121,20 @@
           </section>
         </aticle>
       </main>
+      <input class="header__burger visibility-hidden" type="radio" name="all-menu" id="burger">
       <aside class="aside">
         <header class="aside__header header">
-          <div class="header__left-part">
-              <button class="header__close service__item btn">
-                  <img src="public/icons/close.png" srcset="public/icons/close.svg" alt="Логотип"/>
-              </button>
+          <div class="header__left-part">          
+              <input class="header__close visibility-hidden" type="radio" name="all-menu" id="close-aside">
+              <label for="close-aside" class="header__close service__item btn">
+                <img src="public/icons/close.png" srcset="public/icons/close.svg" alt="Закрыть вкладку с меню"/>
+              </label>
               <div class="header__logo service__item">
                   <img src="public/icons/Group.png" srcset="public/icons/Group.svg" alt="Логотип"/>
               </div>
           </div>
           <div class="aside__search service__item btn">
-              <img src="public/icons/search.png" srcset="public/icons/search.svg" alt="Логотип"/>
+              <img src="public/icons/search.png" srcset="public/icons/search.svg" alt="Поиск"/>
           </div>
   
         </header>

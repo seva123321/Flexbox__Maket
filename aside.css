@@ -2,10 +2,12 @@
   width: 320px;
   /* height: 100vh; */
   display: flex;
+  background-color:#FFFFFF ;
   flex-direction: column;
   position: absolute;
   left: 0;
   top: 0;
+  transition: .3s;
   transform: translateX(-320px);
 }
 
@@ -17,6 +19,11 @@
 }
 
 .header__close {
+}
+
+/* close aside  */
+.header__close:checked + .aside {
+  transform: translateX(-320px);
 }
 
 .aside__search {
