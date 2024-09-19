@@ -33,7 +33,7 @@ button {
 }
 
 body {
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   background-color: #f8f8f8;
   font-family: "TT Lakes Compressed", sans-serif;
