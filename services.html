@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="shortcut icon" href="public/icons/Group.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="services.css" />
+</head>
+<body>
+    <section class="srv">
+        <h1 class="srv-header srv--elem-pad active--font ">Ремонт техники различных брендов</h1>
+        
+        <div class="srv__wrapper">
+            <ul class="srv__list srv--elem-pad">
+            </ul>
+        </div>
+        <!-- <button class="srv__show">
+            <div class="srv__show--arrow about__check-box"></div>
+            <span class="srv__show--text">Показать все</span>
+        </button> -->
+
+        <template id="brand-template">
+            <li class="srv__item">
+                <a href="#" class="link srv__link srv__link--pad">
+                    <img src="public/img/ViewSonic-logo.svg" alt="ViewSonic-logo" class="srv__logo">
+                    <img src="public/icons/go.png" srcset="public/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+            </li>
+        </template>
+
+    </section>
+    <script src="services.js" defer></script>
+</body>
+</html>
