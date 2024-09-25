@@ -181,8 +181,14 @@ body {
   border-radius: 50%;
   /* margin-right: 12px; */
   margin-right: 7px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
+.swiper-pagination:hover,
+.swiper-pagination:focus {
+    border: 1px solid #1b1c21;
+}
 .swiper-pagination:last-child {
   margin-right: 0;
 }
@@ -193,18 +199,21 @@ body {
 .swiper-button-prev {
   position: absolute;
   height: 100px;
-  width: 50%;
+  width: 20%;
   top: 0;
   left: 0;
+  cursor: pointer;
+
   /* background-color: #93b773; */
 }
 
 .swiper-button-next {
   position: absolute;
   height: 100px;
-  width: 50%;
+  width: 20%;
   right: 0;
   top: 0;
+  cursor: pointer;
   /* background-color: #737db7; */
 }
 
