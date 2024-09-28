@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="public/icons/Group.svg" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="aside.css" />
+    <link rel="stylesheet" href="services.css" />
   </head>
   <body>
       <header class="header">
@@ -120,6 +121,74 @@
             <div class="about__img"></div>
           </section>
         </aticle>
+        <article>
+          <section class="srv">
+            <h2 class="srv-header srv--elem-pad active--font ">Ремонт техники различных брендов</h2>
+            
+            <div class="srv__wrapper">
+                <ul class="srv__list srv--elem-pad">
+                </ul>
+            </div>
+            <!-- <button class="srv__show">
+                <div class="srv__show--arrow about__check-box"></div>
+                <span class="srv__show--text">Показать все</span>
+            </button> -->
+    
+            <template id="brand-template">
+                <li class="srv__item srv__item--height-brand">
+                    <a href="#" class="link srv__link srv__link--pad">
+                        <img src="public/img/ViewSonic-logo.svg" alt="ViewSonic-logo" class="srv__logo">
+                        <img src="public/icons/go.png" srcset="public/icons/go.svg" alt="Перейти" class="srv__go">
+                    </a>
+                </li>
+            </template>
+    
+          </section>
+          <section class="srv">
+            <h2 class="srv-header srv--elem-pad active--font ">Ремонт различных видов техники</h2>
+            
+            <div class="srv__wrapper">
+                <ul class="srv__list srv--elem-pad">
+                </ul>
+            </div>
+            <!-- <button class="srv__show">
+                <div class="srv__show--arrow about__check-box"></div>
+                <span class="srv__show--text">Показать все</span>
+            </button> -->
+    
+            <template id="technique-template">
+                <li class="srv__item srv__item--height-technique">
+                    <a href="#" class="link srv__link srv__link--pad srv__link--height-technique">
+                        <h3 class="srv__title srv__title--pad">Ремонт ноутбуков </h3>
+                        <img src="public/icons/go.png" srcset="public/icons/go.svg" alt="Перейти" class="srv__go">
+                    </a>
+                </li>
+            </template>
+    
+          </section>
+          <section class="srv">
+            <h2 class="srv-header srv--elem-pad active--font ">Цены на услуги</h2>
+            
+            <div class="srv__wrapper">
+                <ul class="srv__list srv--elem-pad">
+                </ul>
+            </div>
+            <!-- <button class="srv__show">
+                <div class="srv__show--arrow about__check-box"></div>
+                <span class="srv__show--text">Показать все</span>
+            </button> -->
+    
+            <template id="price-template">
+                <li class="srv__item">
+                    <a href="#" class="link srv__link srv__link--pad">
+                        <img src="public/img/ViewSonic-logo.svg" alt="ViewSonic-logo" class="srv__logo">
+                        <img src="public/icons/go.png" srcset="public/icons/go.svg" alt="Перейти" class="srv__go">
+                    </a>
+                </li>
+            </template>
+    
+          </section>
+        </article>
       </main>
       <input class="header__burger visibility-hidden" type="radio" name="all-menu" id="burger">
       <aside class="aside">
@@ -213,5 +282,6 @@
           </footer>
       </aside>
       <footer class="footer"></footer>  
+    <script src="services.js" defer></script>
   </body>
 </html>

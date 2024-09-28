@@ -12,16 +12,35 @@ let srcImage = [
   "Apple-logo",
 ];
 
+let titleTechniqueName = [
+  "Ремонт ноутбуков",
+  "Ремонт планшетов",
+  "Ремонт ПК",
+  "Ремонт мониторов",
+  "Ремонт телефонов",
+  "Ремонт геймпадов",
+  "Ремонт телевизоров",
+];
+
 const SECTION = document.querySelector(".srv");
 const LIST = document.querySelector(".srv__list");
-const TEMPLATE = document.querySelector("#brand-template");
+const LIST2 = document.querySelectorAll(".srv__list")[1];
+const TEMPLATE_BRAND = document.querySelector("#brand-template");
+const TEMPLATE_TECHNIQUE = document.querySelector("#technique-template");
+const TEMPLATE_PRICE = document.querySelector("#price-template");
 let btnShowList = document.querySelector(".srv__show");
 
 for (let i = 0; i < srcImage.length; i++) {
-  let clone = TEMPLATE.content.cloneNode(true);
+  let clone = TEMPLATE_BRAND.content.cloneNode(true);
   clone.querySelector("img").src = "public/img/" + `${srcImage[i]}.png`;
   clone.querySelector("img").srcset = "public/img/" + `${srcImage[i]}.svg`;
   LIST.appendChild(clone);
+}
+
+for (let i = 0; i < titleTechniqueName.length; i++) {
+  let clone = TEMPLATE_TECHNIQUE.content.cloneNode(true);
+  clone.querySelector(".srv__title").textContent = titleTechniqueName[i];
+  LIST2.appendChild(clone);
 }
 
 let makeElement = function (tag, className, text) {
@@ -112,6 +131,7 @@ if (window.innerWidth < 330) {
   LIST.parentElement.appendChild(pannel);
   LIST.parentElement.appendChild(btnPrevious);
   LIST.parentElement.appendChild(btnNext);
+
 } else {
   let btnShowList = makeElement("button", "srv__show");
   let arrow = makeElement("div", ["srv__show--arrow", "about__check-box"]);

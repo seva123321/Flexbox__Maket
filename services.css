@@ -89,10 +89,18 @@ body {
   margin-right: 16px;
   display: flex;
   align-items: center;
-  height: 72px;
   background-color: #ffffff;
   border: 1px solid #eaeaea;
   border-radius: 10px 10px;
+}
+
+.srv__item--height-brand {
+  height: 72px;
+}
+
+.srv__item--height-technique {
+  height: 160px;
+
 }
 
 .srv__item:last-child {
@@ -104,11 +112,19 @@ body {
     /* width: 224px; */
     display: flex;
     align-items: center;
-    height: 72px;
     background-color: #ffffff;
     border: 1px solid #eaeaea;
     border-radius: 10px 10px;
   }
+}
+
+.srv__title {
+  color: #1b1c21;
+  font-family: "TT-Lakes--regular", sans-serif;
+  font-size: 16px;
+}
+.srv__title--pad {
+  padding: 16px;
 }
 
 .srv__link {
@@ -121,12 +137,20 @@ body {
 
 .srv__link--pad {
 }
+.srv__link--height-technique {
+  height: 100%;
+}
 
 .srv__logo {
   margin-left: 16px;
+  height: fit-content;
+  align-self: center;
 }
 .srv__go {
-  margin-right: 16px;
+  /* margin-right: 16px;
+  width: 40px; */
+  align-self: end;
+  padding: 16px;
 }
 
 .srv__show {
