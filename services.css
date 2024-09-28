@@ -193,6 +193,7 @@ body {
   width: 204px;
   /* height: 12px; */
   display: flex;
+  justify-content: center;
   /* float: left; */
   margin: 0 auto;
 }
@@ -222,18 +223,18 @@ body {
 
 .swiper-button-prev {
   position: absolute;
-  height: 100px;
+  height: 90%;
   width: 20%;
   top: 0;
   left: 0;
   cursor: pointer;
 
-  /* background-color: #93b773; */
+  background-color: #93b773;
 }
 
 .swiper-button-next {
   position: absolute;
-  height: 100px;
+  height: 90%;
   width: 20%;
   right: 0;
   top: 0;

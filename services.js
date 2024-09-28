@@ -22,13 +22,18 @@ let titleTechniqueName = [
   "Ремонт телевизоров",
 ];
 
-const SECTION = document.querySelector(".srv");
+const SOURCE = [srcImage, titleTechniqueName];
+let elemOffset = new Array(SOURCE.length).fill(0)
+
+// const SECTION = document.querySelector(".srv");
 const LIST = document.querySelector(".srv__list");
 const LIST2 = document.querySelectorAll(".srv__list")[1];
+const LIST_COMMON = document.querySelectorAll(".srv__list");
 const TEMPLATE_BRAND = document.querySelector("#brand-template");
 const TEMPLATE_TECHNIQUE = document.querySelector("#technique-template");
 const TEMPLATE_PRICE = document.querySelector("#price-template");
 let btnShowList = document.querySelector(".srv__show");
+// let shift = 0;
 
 for (let i = 0; i < srcImage.length; i++) {
   let clone = TEMPLATE_BRAND.content.cloneNode(true);
@@ -57,10 +62,48 @@ let makeElement = function (tag, className, text) {
   return element;
 };
 
-let shift = 0;
-let swiping = function (btnPrevious, btnNext, pannel) {
-  let margin = +getComputedStyle(LIST.children[0]).marginRight.split("px")[0];
-  let itemWidth = +LIST.children[0].offsetWidth + margin;
+let pannelClick = function (pannel, elementTransform, index) {
+  pannel.addEventListener("click", function (evt) {
+    let target = evt.target;
+    let newIndex = target.dataset.index;
+    if (target.classList.contains("swiper-pagination")) {
+      let margin = +getComputedStyle(elementTransform.children[0]).marginRight.split(
+        "px"
+      )[0];
+      let itemWidth = +elementTransform.children[0].offsetWidth + margin;
+      elemOffset[index] = -newIndex * itemWidth;
+      elementTransform.style.transform = `translate(${elemOffset[index]}px)`;
+      pannel
+        .querySelector(".swiper-pagination--active")
+        .classList.remove("swiper-pagination--active");
+      target.classList.add("swiper-pagination--active");
+    }
+  });
+};
+
+let makePaginationPannel = function (paginationCount) {
+  let pannel = makeElement("div", "swiper-pannel");
+
+  for (let i = 0; i < paginationCount.length; i++) {
+    let pagination = makeElement("div", "swiper-pagination");
+    if (i == 0) {
+      pagination = makeElement("div", [
+        "swiper-pagination",
+        "swiper-pagination--active",
+      ]);
+    }
+    pagination.dataset.index = i;
+    pannel.appendChild(pagination);
+  }
+
+
+  return pannel;
+};
+
+
+let swiping = function (btnPrevious, btnNext, pannel, elementTransform, index) {
+  let margin = +getComputedStyle(elementTransform.children[0]).marginRight.split("px")[0];
+  let itemWidth = +elementTransform.children[0].offsetWidth + margin;
 
   let paginationIsActive = function (sign) {
     for (let i = 0; i < pannel.children.length; i++) {
@@ -73,84 +116,65 @@ let swiping = function (btnPrevious, btnNext, pannel) {
   };
 
   btnNext.addEventListener("click", function (e) {
-    if (shift > (srcImage.length - 1) * -itemWidth) {
-      shift -= itemWidth;
+    if (elemOffset[index] > (srcImage.length - 1) * -itemWidth) {
+      elemOffset[index] -= itemWidth;
       let sign = 1;
       paginationIsActive(sign);
     }
-    LIST.style.transform = `translate(${shift}px)`;
+    elementTransform.style.transform = `translate(${elemOffset[index]}px)`;
   });
 
   btnPrevious.addEventListener("click", function (e) {
-    if (shift < 0) {
-      shift += itemWidth;
+    if (elemOffset[index] < 0) {
+      elemOffset[index] += itemWidth;
       let sign = -1;
       paginationIsActive(sign);
     }
-    LIST.style.transform = `translate(${shift}px)`;
+    elementTransform.style.transform = `translate(${elemOffset[index]}px)`;
+  });
+};
+
+let btnListener = function (btn, elementShow) {
+  btn.addEventListener("click", () => {
+    let arrow = btn.querySelector(".srv__show--arrow");
+    let textBtn = btn.querySelector(".srv__show--text");
+    textBtn.textContent = "Показать все";
+
+    if (!elementShow.classList.contains("srv__list--show-all")) {
+      textBtn.textContent = "Скрыть";
+    }
+
+    elementShow.classList.toggle("srv__list--show-all");
+    arrow.classList.toggle("srv__show--arrow--rotate");
   });
 };
 
 if (window.innerWidth < 330) {
-  let pannel = makeElement("div", "swiper-pannel");
+  LIST_COMMON.forEach((list, index) => {
+    let pannel = makePaginationPannel(SOURCE[index]);
+    pannelClick(pannel, list, index);
+    
+    let btnPrevious = makeElement("div", "swiper-button-prev");
+    let btnNext = makeElement("div", "swiper-button-next");
 
-  for (let i = 0; i < srcImage.length; i++) {
-    let pagination = makeElement("div", "swiper-pagination");
+    swiping(btnPrevious, btnNext, pannel, list, index);
 
-    if (i == 0) {
-      pagination = makeElement("div", [
-        "swiper-pagination",
-        "swiper-pagination--active",
-      ]);
-    }
-    pagination.dataset.index = i;
-    pannel.appendChild(pagination);
-  }
-
-  let btnPrevious = makeElement("div", "swiper-button-prev");
-  let btnNext = makeElement("div", "swiper-button-next");
-  pannel.addEventListener("click", function (evt) {
-    let target = evt.target;
-    let newIndex = target.dataset.index;
-    if (target.classList.contains("swiper-pagination")) {
-      let margin = +getComputedStyle(LIST.children[0]).marginRight.split(
-        "px"
-      )[0];
-      let itemWidth = +LIST.children[0].offsetWidth + margin;
-      shift = -newIndex * itemWidth;
-      LIST.style.transform = `translate(${shift}px)`;
-      pannel
-        .querySelector(".swiper-pagination--active")
-        .classList.remove("swiper-pagination--active");
-      target.classList.add("swiper-pagination--active");
-    }
+    list.parentElement.appendChild(pannel);
+    list.parentElement.appendChild(btnPrevious);
+    list.parentElement.appendChild(btnNext);
   });
 
-  swiping(btnPrevious, btnNext, pannel);
-
-  LIST.parentElement.appendChild(pannel);
-  LIST.parentElement.appendChild(btnPrevious);
-  LIST.parentElement.appendChild(btnNext);
-
 } else {
-  let btnShowList = makeElement("button", "srv__show");
-  let arrow = makeElement("div", ["srv__show--arrow", "about__check-box"]);
-  let textBtn = makeElement("span", "srv__show--text", "Показать все");
+  LIST_COMMON.forEach((list) => {
+    let btnShowList = makeElement("button", "srv__show");
+    let arrow = makeElement("div", ["srv__show--arrow", "about__check-box"]);
+    let textBtn = makeElement("span", "srv__show--text", "Показать все");
 
-  btnShowList.appendChild(arrow);
-  btnShowList.appendChild(textBtn);
-  SECTION.appendChild(btnShowList);
+    btnShowList.appendChild(arrow);
+    btnShowList.appendChild(textBtn);
 
-  btnShowList.addEventListener("click", () => {
-    let arrow = btnShowList.querySelector(".srv__show--arrow");
-    let textBtn = btnShowList.querySelector(".srv__show--text");
-    textBtn.textContent = "Показать все";
+    list.closest(".srv").appendChild(btnShowList);
 
-    if (!LIST.classList.contains("srv__list--show-all")) {
-      textBtn.textContent = "Скрыть";
-    }
-
-    LIST.classList.toggle("srv__list--show-all");
-    arrow.classList.toggle("srv__show--arrow--rotate");
+    btnListener(btnShowList, list);
   });
 }
