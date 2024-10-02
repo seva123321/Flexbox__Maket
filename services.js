@@ -116,7 +116,7 @@ let swiping = function (btnPrevious, btnNext, pannel, elementTransform, index) {
   };
 
   btnNext.addEventListener("click", function (e) {
-    if (elemOffset[index] > (srcImage.length - 1) * -itemWidth) {
+    if (elemOffset[index] > (elementTransform.children.length-1) * -itemWidth) { 
       elemOffset[index] -= itemWidth;
       let sign = 1;
       paginationIsActive(sign);

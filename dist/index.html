@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Exercise BEM</title>
+    <link rel="shortcut icon" href="./img/icons/Group.svg">
+    
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__left-part">
+        <div class="block__all-menu block__all-menu--line">
+          
+          <label for="burger" class="link btn">
+            <img src="img/icons/burger.png" srcset="img/icons/burger.svg" alt="Меню">
+          </label>
+        </div>
+        
+        <div class="header__logo">
+          <img src="img/icons/Group.png" srcset="img/icons/Group.svg" alt="Логотип">
+        </div>
+      </div>
+      <nav class="service">
+        <ul class="service__list service__list--screen--big">
+          <li class="item service__item">
+            <a href="#" class="link btn">
+              <img src="img/icons/call.png" srcset="img/icons/call.svg" alt="Телефон">
+            </a>
+          </li>
+          <li class="item service__item">
+            <a href="#" class="link btn">
+              <img src="img/icons/chat.png" srcset="img/icons/chat.svg" alt="Почта">
+            </a>
+          </li>
+          <li class="item service__item">
+            <a href="#" class="link btn">
+              <img src="img/icons/profile.png" srcset="img/icons/profile.svg" alt="Профиль">
+            </a>
+          </li>
+        </ul>
+        <ul class="service__list">
+          <li class="item service__item service__item--line">
+            <div class="item__text">Оставить заявку</div>
+            <a href="#" class="link btn">
+              <img src="img/icons/repair.png" srcset="img/icons/repair.svg" alt="Оставить заявку">
+            </a>
+          </li>
+          <li class="item service__item">
+            <div class="item__text">Статус ремонта</div>
+            <a href="#" class="link btn">
+              <img src="img/icons/checkstatus.png" srcset="img/icons/checkstatus.svg" alt="Статус ремонта">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <aticle>
+        <nav class="nav">
+          <h1 class="nav__head nav__head--left-line">Услуги и сервисы</h1>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="link nav__link nav__link--active">
+                Ремонтируемые устройства
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="link nav__link"> Дополнительные услуги </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="link nav__link"> Цены на услуги </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="link nav__link"> Адреса сервисных центров </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="link nav__link"> Специальные цены </a>
+            </li>
+          </ul>
+        </nav>
+        <section class="about">
+          <div class="about__inner">
+            <input class="about__read visibility-hidden" type="checkbox" id="read">
+            <div class="about__content">
+              <p class="about__text">
+                Мы являемся авторизованным сервисным центром по ремонту техники
+                Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+                официальной гарантией производителя.
+              </p>
+              <p class="about__text">
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                партнера, что подтверждает большое количество постоянных
+                клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
+                и, в свою очередь, советуют нас родным и близким.
+              </p>
+              <p class="about__text">
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                партнера, что подтверждает большое количество постоянных
+                клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
+                и, в свою очередь, советуют нас родным и близким.
+              </p>
+              <p class="about__text">
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                партнера, что подтверждает большое количество постоянных
+                клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
+                и, в свою очередь, советуют нас родным и близким.
+              </p>
+              <p class="about__text">
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                партнера, что подтверждает большое количество постоянных
+                клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
+                и, в свою очередь, советуют нас родным и близким.
+              </p>
+            </div>
+            <div class="about__show-pannel">
+              <button class="about__check-box"></button>
+              <label for="read" class="about__label"> Читать Далее </label>
+            </div>
+          </div>
+
+          <div class="about__img"></div>
+        </section>
+      </aticle>
+      <article>
+        <section class="srv">
+          <h2 class="srv-header srv--elem-pad active--font">
+            Ремонт техники различных брендов
+          </h2>
+          <div class="srv__wrapper">
+            <ul class="srv__list srv--elem-pad">
+              <li class="srv__item srv__item--height-brand">
+                <a href="#" class="link srv__link srv__link--pad">
+                  <img src="img/imgContent/Lenovo-logo.png" alt="Lenovo-logo" class="srv__logo" srcset="img/imgContent/Lenovo-logo.svg">
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+
+              <li class="srv__item srv__item--height-brand">
+                <a href="#" class="link srv__link srv__link--pad">
+                  <img src="img/imgContent/Samsung-logo.png" alt="Samsung-logo" class="srv__logo" srcset="img/imgContent/Samsung-logo.svg">
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+
+              <li class="srv__item srv__item--height-brand">
+                <a href="#" class="link srv__link srv__link--pad">
+                  <img src="img/imgContent/Apple-logo.png" alt="Apple-logo" class="srv__logo" srcset="img/imgContent/Apple-logo.svg">
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+
+              <li class="srv__item srv__item--height-brand">
+                <a href="#" class="link srv__link srv__link--pad">
+                  <img src="img/imgContent/ViewSonic-logo.png" alt="ViewSonic-logo" class="srv__logo" srcset="img/imgContent/ViewSonic-logo.svg">
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+
+              <li class="srv__item srv__item--height-brand">
+                <a href="#" class="link srv__link srv__link--pad">
+                  <img src="img/imgContent/Bosch-logo.png" alt="Bosch-logo" class="srv__logo" srcset="img/imgContent/Bosch-logo.svg">
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+
+              <li class="srv__item srv__item--height-brand">
+                <a href="#" class="link srv__link srv__link--pad">
+                  <img src="img/imgContent/Hp-logo.png" alt="Hp-logo" class="srv__logo" srcset="img/imgContent/Hp-logo.svg">
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+
+              <li class="srv__item srv__item--height-brand">
+                <a href="#" class="link srv__link srv__link--pad">
+                  <img src="img/imgContent/Acer-logo.png" alt="Acer-logo" class="srv__logo" srcset="img/imgContent/Acer-logo.svg">
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+
+              <li class="srv__item srv__item--height-brand">
+                <a href="#" class="link srv__link srv__link--pad">
+                  <img src="img/imgContent/Sony-logo.png" alt="Sony-logo" class="srv__logo" srcset="img/imgContent/Sony-logo.svg">
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+
+              <li class="srv__item srv__item--height-brand">
+                <a href="#" class="link srv__link srv__link--pad">
+                  <img src="img/imgContent/Lenovo-logo.png" alt="Lenovo-logo" class="srv__logo" srcset="img/imgContent/Lenovo-logo.svg">
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+
+              <li class="srv__item srv__item--height-brand">
+                <a href="#" class="link srv__link srv__link--pad">
+                  <img src="img/imgContent/Samsung-logo.png" alt="Samsung-logo" class="srv__logo" srcset="img/imgContent/Samsung-logo.svg">
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+
+              <li class="srv__item srv__item--height-brand">
+                <a href="#" class="link srv__link srv__link--pad">
+                  <img src="img/imgContent/Apple-logo.png" alt="Apple-logo" class="srv__logo" srcset="img/imgContent/Apple-logo.svg">
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          
+        </section>
+        <section class="srv">
+          <div class="srv__wrapper">
+            <ul class="srv__list srv--elem-pad">
+              <li class="srv__item srv__item--height-technique">
+                <a href="#" class="link srv__link srv__link--pad srv__link--height-technique">
+                  <h3 class="srv__title srv__title--pad">Ремонт ноутбуков</h3>
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+
+              <li class="srv__item srv__item--height-technique">
+                <a href="#" class="link srv__link srv__link--pad srv__link--height-technique">
+                  <h3 class="srv__title srv__title--pad">Ремонт планшетов</h3>
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+
+              <li class="srv__item srv__item--height-technique">
+                <a href="#" class="link srv__link srv__link--pad srv__link--height-technique">
+                  <h3 class="srv__title srv__title--pad">Ремонт ПК</h3>
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+
+              <li class="srv__item srv__item--height-technique">
+                <a href="#" class="link srv__link srv__link--pad srv__link--height-technique">
+                  <h3 class="srv__title srv__title--pad">Ремонт мониторов</h3>
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+
+              <li class="srv__item srv__item--height-technique">
+                <a href="#" class="link srv__link srv__link--pad srv__link--height-technique">
+                  <h3 class="srv__title srv__title--pad">Ремонт телефонов</h3>
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+
+              <li class="srv__item srv__item--height-technique">
+                <a href="#" class="link srv__link srv__link--pad srv__link--height-technique">
+                  <h3 class="srv__title srv__title--pad">Ремонт геймпадов</h3>
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+
+              <li class="srv__item srv__item--height-technique">
+                <a href="#" class="link srv__link srv__link--pad srv__link--height-technique">
+                  <h3 class="srv__title srv__title--pad">Ремонт телевизоров</h3>
+                  <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="srv">
+          <h2 class="srv-header srv--elem-pad active--font">Цены на услуги</h2>
+
+          <div class="srv__wrapper">
+            
+          </div>
+          
+
+          <template id="price-template">
+            <li class="srv__item">
+              <a href="#" class="link srv__link srv__link--pad">
+                <img src="img/imgContent/ViewSonic-logo.svg" alt="ViewSonic-logo" class="srv__logo">
+                <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+              </a>
+            </li>
+          </template>
+        </section>
+      </article>
+    </main>
+    <input class="header__burger visibility-hidden" type="radio" name="all-menu" id="burger">
+    <aside class="aside">
+      <header class="aside__header header">
+        <div class="header__left-part">
+          <input class="header__close visibility-hidden" type="radio" name="all-menu" id="close-aside">
+          <label for="close-aside" class="header__close service__item btn">
+            <img src="img/icons/close.png" srcset="img/icons/close.svg" alt="Закрыть вкладку с меню">
+          </label>
+          <div class="header__logo service__item">
+            <img src="img/icons/Group.png" srcset="img/icons/Group.svg" alt="Логотип">
+          </div>
+        </div>
+        <div class="aside__search service__item btn">
+          <img src="img/icons/search.png" srcset="img/icons/search.svg" alt="Поиск">
+        </div>
+      </header>
+      <section class="aside__nav">
+        <ul class="aside__list aside__list--vertical">
+          <li class="item">
+            <a href="#" class="link aside__link aside__link--font active--font nav__head--left-line">Ремонт техники</a>
+          </li>
+          <li class="item">
+            <a href="#" class="link aside__link aside__link--font">Услуги и сервисы</a>
+          </li>
+          <li class="item">
+            <a href="#" class="link aside__link aside__link--font">Корпоративным клиентам</a>
+          </li>
+          <li class="item">
+            <a href="#" class="link aside__link aside__link--font">Продавцам техники</a>
+          </li>
+          <li class="item">
+            <a href="#" class="link aside__link aside__link--font">Партнерам</a>
+          </li>
+          <li class="item">
+            <a href="#" class="link aside__link aside__link--font">Производителям</a>
+          </li>
+          <li class="item">
+            <a href="#" class="link aside__link aside__link--font">Наши сервисные центр</a>
+          </li>
+          <li class="item">
+            <a href="#" class="link aside__link aside__link--font">Контакты</a>
+          </li>
+        </ul>
+      </section>
+      <footer class="aside__footer">
+        <div class="aside__contacts">
+          <ul class="aside__list">
+            <li class="aside__item">
+              <a href="#" class="link btn">
+                <img src="img/icons/call.png" srcset="img/icons/call.svg" alt="Телефон">
+              </a>
+            </li>
+            <li class="aside__item">
+              <a href="#" class="link btn">
+                <img src="img/icons/chat.png" srcset="img/icons/chat.svg" alt="Телефон">
+              </a>
+            </li>
+            <li class="aside__item">
+              <a href="#" class="link btn">
+                <img src="img/icons/profile.png" srcset="img/icons/profile.svg" alt="Телефон">
+              </a>
+            </li>
+          </ul>
+          <a href="mailto:mail@cps.com" class="aside__mail aside__link--font link">mail@cps.com</a>
+          <a href="tel:+78008908900" class="aside__tel aside__link--font link"><span>8</span><span>800</span><span>890</span>8900</a>
+        </div>
+        <div class="lang-pannel">
+          <input class="lang-pannel__input visibility-hidden" type="radio" name="language" id="lang_ru" checked="checked">
+          <label for="lang_ru" class="lang-pannel__label">RU</label>
+
+          <input class="lang-pannel__input visibility-hidden" type="radio" name="language" id="lang_en">
+          <label for="lang_en" class="lang-pannel__label">EN</label>
+
+          <input class="lang-pannel__input visibility-hidden" type="radio" name="language" id="lang_cn">
+          <label for="lang_cn" class="lang-pannel__label">CN</label>
+          
+        </div>
+      </footer>
+    </aside>
+    <footer class="footer"></footer>
+  <script type="text/javascript" src="./js/bundle.js"></script></body>
+</html>
