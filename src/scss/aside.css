@@ -1,0 +1,161 @@
+.aside {
+  width: 320px;
+  /* height: 100vh; */
+  display: flex;
+  background-color:#FFFFFF ;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: .3s;
+  transform: translateX(-320px);
+}
+
+.aside__header {
+  padding: 16px;
+}
+
+.service__item {
+}
+
+.header__close {
+}
+
+/* close aside  */
+.header__close:checked + .aside {
+  transform: translateX(-320px);
+}
+
+.aside__search {
+}
+
+.aside__nav {
+  padding: 24px 0;
+  flex-grow: 1;
+}
+
+.aside__list {
+  display: flex;
+  list-style: none;
+}
+
+.aside__list--vertical {
+  flex-direction: column;
+}
+
+.aside__link {
+  flex-grow: 1;
+  padding: 16px 24px;
+  position: relative;
+}
+
+/* .aside__link::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #41f6d7;
+}
+
+@keyframes lineRun {
+  to {
+    width: 50%;
+  }
+}
+
+.aside__link:hover::after{
+  animation-name: lineRun;
+  animation-duration: .3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+} */
+
+.aside__footer {
+}
+
+.aside__contacts {
+  margin: 16px;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aside__item {
+  padding: 8px;
+}
+
+.aside__link--font {
+  color: #1b1c21;
+  font-family: "TT Lakes Compressed", sans-serif;
+  font-size: 16px;
+}
+
+.active--font {
+  color: #7e7e82;
+}
+
+.aside__mail {
+  padding: 8px;
+  user-select: text;
+}
+
+.aside__tel {
+  padding: 8px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.aside__tel span {
+  margin-right: 5px;
+}
+
+.lang-pannel {
+  margin: 0 24px 32px 24px;
+}
+
+.lang-pannel__input {
+}
+
+.lang-pannel__input:checked + .lang-pannel__label{
+  color: #7e7e82;
+}
+
+.lang-pannel__label {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.btn {
+  transition: opacity, filter .25s;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 0.8;
+}
+
+.btn:active {
+  -webkit-filter: brightness(0.5);
+  -moz-filter: brightness(0.5);
+  -ms-filter: brightness(0.5);
+  -o-filter: brightness(0.5);
+  filter: brightness(0.5);
+}
+
+/* .btn--burger:hover ~ .aside{
+  transform: translateX(320px);
+} */
+
+/* .block__all-menu:hover ~ .aside{
+  transform: translateX(320px);
+} */
+
+/* .lang-pannel__input:checked ~ .lang-pannel .lang-pannel__label{
+  font-size: 30px;
+  width: 20px;
+  background-color: aqua;
+} */
