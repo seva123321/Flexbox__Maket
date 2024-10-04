@@ -22,13 +22,32 @@ let titleTechniqueName = [
   "Ремонт телевизоров",
 ];
 
-const SOURCE = [srcImage, titleTechniqueName];
-let elemOffset = new Array(SOURCE.length).fill(0)
+let servicesValuesPrice = [
+  { "Ремонтные услуги": "Диагностика", Цена: "Бесплатно", Срок: "30 мин" },
+  { "Ремонтные услуги": "Замена дисплея", Цена: "1000₽", Срок: "30-120 мин" },
+  {
+    "Ремонтные услуги": "Замена полифонического динамика",
+    Цена: "1000₽",
+    Срок: "30-120 мин",
+  },
+  {
+    "Ремонтные услуги": "Тестирование с выдачей технического заключения",
+    Цена: "1000₽",
+    Срок: "30-120 мин",
+  },
+  {
+    "Ремонтные услуги": "Замена программного обеспечения",
+    Цена: "1000₽",
+    Срок: "30-120 мин",
+  },
+];
+
+const SOURCE = [srcImage, titleTechniqueName, servicesValuesPrice];
+let elemOffset = new Array(SOURCE.length).fill(0);
 
 // const SECTION = document.querySelector(".srv");
-const LIST = document.querySelector(".srv__list");
-const LIST2 = document.querySelectorAll(".srv__list")[1];
 const LIST_COMMON = document.querySelectorAll(".srv__list");
+const LIST_COMMON_SHOWMORE = document.querySelectorAll(".srv__list--showmore");
 const TEMPLATE_BRAND = document.querySelector("#brand-template");
 const TEMPLATE_TECHNIQUE = document.querySelector("#technique-template");
 const TEMPLATE_PRICE = document.querySelector("#price-template");
@@ -39,13 +58,14 @@ for (let i = 0; i < srcImage.length; i++) {
   let clone = TEMPLATE_BRAND.content.cloneNode(true);
   clone.querySelector("img").src = "public/img/" + `${srcImage[i]}.png`;
   clone.querySelector("img").srcset = "public/img/" + `${srcImage[i]}.svg`;
-  LIST.appendChild(clone);
+
+  LIST_COMMON[0].appendChild(clone);
 }
 
 for (let i = 0; i < titleTechniqueName.length; i++) {
   let clone = TEMPLATE_TECHNIQUE.content.cloneNode(true);
   clone.querySelector(".srv__title").textContent = titleTechniqueName[i];
-  LIST2.appendChild(clone);
+  LIST_COMMON[1].appendChild(clone);
 }
 
 let makeElement = function (tag, className, text) {
@@ -67,9 +87,9 @@ let pannelClick = function (pannel, elementTransform, index) {
     let target = evt.target;
     let newIndex = target.dataset.index;
     if (target.classList.contains("swiper-pagination")) {
-      let margin = +getComputedStyle(elementTransform.children[0]).marginRight.split(
-        "px"
-      )[0];
+      let margin = +getComputedStyle(
+        elementTransform.children[0]
+      ).marginRight.split("px")[0];
       let itemWidth = +elementTransform.children[0].offsetWidth + margin;
       elemOffset[index] = -newIndex * itemWidth;
       elementTransform.style.transform = `translate(${elemOffset[index]}px)`;
@@ -96,13 +116,13 @@ let makePaginationPannel = function (paginationCount) {
     pannel.appendChild(pagination);
   }
 
-
   return pannel;
 };
 
-
 let swiping = function (btnPrevious, btnNext, pannel, elementTransform, index) {
-  let margin = +getComputedStyle(elementTransform.children[0]).marginRight.split("px")[0];
+  let margin = +getComputedStyle(
+    elementTransform.children[0]
+  ).marginRight.split("px")[0];
   let itemWidth = +elementTransform.children[0].offsetWidth + margin;
 
   let paginationIsActive = function (sign) {
@@ -116,7 +136,10 @@ let swiping = function (btnPrevious, btnNext, pannel, elementTransform, index) {
   };
 
   btnNext.addEventListener("click", function (e) {
-    if (elemOffset[index] > (elementTransform.children.length-1) * -itemWidth) { 
+    if (
+      elemOffset[index] >
+      (elementTransform.children.length - 1) * -itemWidth
+    ) {
       elemOffset[index] -= itemWidth;
       let sign = 1;
       paginationIsActive(sign);
@@ -149,11 +172,25 @@ let btnListener = function (btn, elementShow) {
   });
 };
 
-if (window.innerWidth < 330) {
+// if (window.innerWidth < 330) {
+if (window.innerWidth < 760) {
   LIST_COMMON.forEach((list, index) => {
+    if (index === LIST_COMMON.length - 1) {
+      document.querySelector('.table-price').parentElement.style.display = "none"
+      servicesValuesPrice.forEach((item, indexArr) => {
+        let clone = TEMPLATE_PRICE.content.cloneNode(true);
+        clone.querySelectorAll(".srv__dd").forEach((value, indexValue) => {
+          value.textContent = Object.values(servicesValuesPrice[indexArr])[
+            indexValue
+          ];
+        });
+        LIST_COMMON[index].appendChild(clone);
+      });
+    }
+
     let pannel = makePaginationPannel(SOURCE[index]);
     pannelClick(pannel, list, index);
-    
+
     let btnPrevious = makeElement("div", "swiper-button-prev");
     let btnNext = makeElement("div", "swiper-button-next");
 
@@ -163,9 +200,8 @@ if (window.innerWidth < 330) {
     list.parentElement.appendChild(btnPrevious);
     list.parentElement.appendChild(btnNext);
   });
-
 } else {
-  LIST_COMMON.forEach((list) => {
+  LIST_COMMON_SHOWMORE.forEach((list) => {
     let btnShowList = makeElement("button", "srv__show");
     let arrow = makeElement("div", ["srv__show--arrow", "about__check-box"]);
     let textBtn = makeElement("span", "srv__show--text", "Показать все");

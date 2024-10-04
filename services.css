@@ -42,7 +42,6 @@ body {
   background: linear-gradient(50deg, #f8f8f8 0%, #ffffff 98.61%);
 }
 
-
 .srv__wrapper {
   overflow: hidden;
   position: relative;
@@ -54,7 +53,8 @@ body {
   transform: translate(0);
 }
 
-@media screen and (min-width: 330px) {
+/* @media screen and (min-width: 330px) { */
+@media screen and (min-width: 760px) {
   .srv__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
@@ -69,7 +69,8 @@ body {
   padding: 16px;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) { */
+@media screen and (min-width: 760px) {
   .srv--elem-pad {
     padding: 16px 24px;
   }
@@ -100,14 +101,14 @@ body {
 
 .srv__item--height-technique {
   height: 160px;
-
 }
 
 .srv__item:last-child {
   margin-right: 0;
 }
 
-@media screen and (min-width: 330px) {
+/* @media screen and (min-width: 330px) { */
+@media screen and (min-width: 760px) {
   .srv__item {
     /* width: 224px; */
     display: flex;
@@ -158,7 +159,8 @@ body {
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) { */
+@media screen and (min-width: 760px) {
   .srv__show {
     margin: 24px;
   }
@@ -212,7 +214,7 @@ body {
 
 .swiper-pagination:hover,
 .swiper-pagination:focus {
-    border: 1px solid #1b1c21;
+  border: 1px solid #1b1c21;
 }
 .swiper-pagination:last-child {
   margin-right: 0;
@@ -242,5 +244,182 @@ body {
   /* background-color: #737db7; */
 }
 
-#brand-template {
+.table-price {
+  border-collapse: collapse;
+  /* padding: 16px 24px; */
+  table-layout: fixed;
+  width: 100%;
+  text-align: left;
+  letter-spacing: 0.5px;
+  text-wrap: nowrap;
+  font-size: 14px;
 }
+
+thead th:nth-child(1) {
+  width: 56%;
+}
+
+thead th:nth-child(2) {
+  width: 12%;
+}
+
+thead th:nth-child(3) {
+  width: 12%;
+}
+
+thead th:nth-child(4) {
+  width: 20%;
+}
+
+.table-price__thead {
+}
+.table-price__tbody {
+  background-color: #ffffff;
+  border-radius: 10px 10px;
+}
+.table-price__row-head {
+  height: 65px;
+  vertical-align: middle;
+}
+.table-price__row-body {
+  height: 65px;
+  vertical-align: middle;
+  /* padding: 0 16px; */
+  border-bottom: 1px solid #eaeaea;
+}
+.table-price__row-body:last-child {
+  border-bottom: none;
+}
+.table-price__th {
+  /* padding: 16px 24px; */
+}
+.table-price__th:first-child {
+  /* text-align: right;
+  text-align: -webkit-right; */
+  padding-left: 16px;
+}
+.table-price__td {
+  /* padding: 12px 0; */
+}
+.table-price__td:last-child {
+  text-align: right;
+  padding-right: 16px;
+}
+.table-price__td:first-child {
+  /* text-align: right;
+  text-align: -webkit-right; */
+  padding-left: 16px;
+}
+.table__link {
+  display: inline;
+  padding: 9px 21px;
+  background-color: #ff3e79;
+  border-radius: 16px 16px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  letter-spacing: normal;
+}
+.link-arrow {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  transform: rotate(-45deg);
+}
+.link-arrow--color {
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+}
+
+/* .srv__list--price {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+  text-wrap: nowrap;
+  font-size: 14px;
+} */
+
+.srv__item--height-price {
+  /* height: 200px; */
+}
+.srv__dl {
+  padding: 16px;
+  font-size: 14px;
+  width: 260px;
+
+}
+
+.srv__dt {
+  margin-bottom: 4px;
+}
+.srv__dt-title {
+}
+.srv__dd {
+  margin-bottom: 16px;
+}
+.srv__dd:last-child{
+  margin-bottom: 0;
+}
+.srv__dt {
+}
+.srv__price {
+}
+.srv__time {
+}
+.srv__dt-dd--wrapper {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+/*
+.gtid-price {
+  display: grid;
+  grid-template-columns: 348px minmax(74px, 1fr) minmax(81px, 1fr) minmax(119px, 1fr);
+  gap: 24px;
+  align-items: center;
+  text-wrap: nowrap;
+  font-size: 14px;
+}
+.gtid-price__th {
+  text-align: left;
+
+}
+.gtid-price__td {
+  background-color: #ffffff;
+
+}
+.gtid__link {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  width: 119px;
+  height: 32px;
+  background-color: #ff3e79;
+  border-radius: 16px 16px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  letter-spacing: normal;
+}
+
+.link-arrow {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin:auto;
+  transform: rotate(-45deg);
+}
+ .link-arrow--color {
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+}
+*/
