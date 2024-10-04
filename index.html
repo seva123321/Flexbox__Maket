@@ -13,7 +13,6 @@
     <header class="header">
       <div class="header__left-part">
         <div class="block__all-menu block__all-menu--line">
-          <!-- <input class="header__burger" type="radio" name="all-menu" id="burger"> -->
           <label for="burger" class="link btn">
             <img
               src="public/icons/burger.png"
@@ -22,11 +21,6 @@
             />
           </label>
         </div>
-        <!-- <div class="block__all-menu block__all-menu--line">
-            <a href="#" class="link btn btn--burger">
-              <img src="public/icons/burger.png" srcset="public/icons/burger.svg" alt="Меню"/>
-            </a>
-          </div> -->
         <div class="header__logo">
           <img
             src="public/icons/Group.png"
@@ -169,10 +163,6 @@
           <div class="srv__wrapper">
             <ul class="srv__list srv__list--showmore srv--elem-pad"></ul>
           </div>
-          <!-- <button class="srv__show">
-                <div class="srv__show--arrow about__check-box"></div>
-                <span class="srv__show--text">Показать все</span>
-            </button> -->
 
           <template id="brand-template">
             <li class="srv__item srv__item--height-brand">
@@ -200,10 +190,6 @@
           <div class="srv__wrapper">
             <ul class="srv__list srv__list--showmore srv--elem-pad"></ul>
           </div>
-          <!-- <button class="srv__show">
-                <div class="srv__show--arrow about__check-box"></div>
-                <span class="srv__show--text">Показать все</span>
-            </button> -->
 
           <template id="technique-template">
             <li class="srv__item srv__item--height-technique">
@@ -224,116 +210,92 @@
         </section>
         <section class="srv">
           <h2 class="srv-header srv--elem-pad active--font">Цены на услуги</h2>
+          <div class="srv__wrapper srv--elem-pad">
+            <table class="table-price">
+              <thead class="table-price__thead">
+                <tr class="table-price__row-head active--font">
+                  <th class="table-price__th">Ремонтные услуги</th>
+                  <th class="table-price__th">Цена</th>
+                  <th class="table-price__th">Срок</th>
+                  <th class="table-price__th"></th>
+                </tr>
+              </thead>
+              <tbody class="table-price__tbody">
+                <tr class="table-price__row-body">
+                  <td class="table-price__td">Диагностика</td>
+                  <td class="table-price__td">Бесплатно</td>
+                  <td class="table-price__td">30 мин</td>
+                  <td class="table-price__td">
+                    <a href="#" class="link table__link"
+                      >Заказать
+                      <span class="link-arrow link-arrow--color"></span
+                    ></a>
+                  </td>
+                </tr>
+                <tr class="table-price__row-body">
+                  <td class="table-price__td">Замена дисплея</td>
+                  <td class="table-price__td">1000₽</td>
+                  <td class="table-price__td">30-120 мин</td>
+                  <td class="table-price__td">
+                    <a href="#" class="link table__link"
+                      >Заказать
+                      <span class="link-arrow link-arrow--color"></span
+                    ></a>
+                  </td>
+                </tr>
+                <tr class="table-price__row-body">
+                  <td class="table-price__td">
+                    Замена полифонического динамика
+                  </td>
+                  <td class="table-price__td">1000₽</td>
+                  <td class="table-price__td">30-120 мин</td>
+                  <td class="table-price__td">
+                    <a href="#" class="link table__link"
+                      >Заказать
+                      <span class="link-arrow link-arrow--color"></span
+                    ></a>
+                  </td>
+                </tr>
+                <tr class="table-price__row-body">
+                  <td class="table-price__td">
+                    Тестирование с выдачей технического заключения
+                  </td>
+                  <td class="table-price__td">1000₽</td>
+                  <td class="table-price__td">30-120 мин</td>
+                  <td class="table-price__td">
+                    <a href="#" class="link table__link"
+                      >Заказать
+                      <span class="link-arrow link-arrow--color"></span
+                    ></a>
+                  </td>
+                </tr>
+                <tr class="table-price__row-body">
+                  <td class="table-price__td">
+                    Замена программного обеспечения
+                  </td>
+                  <td class="table-price__td">1000₽</td>
+                  <td class="table-price__td">30-120 мин</td>
+                  <td class="table-price__td">
+                    <a href="#" class="link table__link"
+                      >Заказать
+                      <span class="link-arrow link-arrow--color"></span
+                    ></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-
-
-<!-- 
-
-          <div class="gtid-price srv__wrapper srv--elem-pad">
-                <div class="gtid-price__th active--font">Ремонтные услуги</div>
-                <div class="gtid-price__th active--font">Цена</div>
-                <div class="gtid-price__th active--font">Срок</div>
-                <div class="gtid-price__th active--font"></div>
-                <div class="gtid-price__td">Диагностика</div>
-                <div class="gtid-price__td">Бесплатно</div>
-                <div class="gtid-price__td">30 мин</div>
-                <div class="gtid-price__td">
-                  <a href="#" class="link gtid__link">Заказать <span class="link-arrow link-arrow--color"></span></a>
-                </div>
-                <div class="gtid-price__td">Замена дисплея</div>
-                <div class="gtid-price__td">1000₽</div>
-                <div class="gtid-price__td">30-120 мин</div>
-                <div class="gtid-price__td">
-                  <a href="#" class="link gtid__link">Заказать <span class="link-arrow link-arrow--color"></span></a>
-                </div>
-                <div class="gtid-price__td">Замена полифонического динамика</div>
-                <div class="gtid-price__td">1000₽</div>
-                <div class="gtid-price__td">30-120 мин</div>
-                <div class="gtid-price__td">
-                  <a href="#" class="link gtid__link">Заказать <span class="link-arrow link-arrow--color"></span></a>
-                </div>
-                <div class="gtid-price__td">Тестирование с выдачей технического заключения</div>
-                <div class="gtid-price__td">1000₽</div>
-                <div class="gtid-price__td">30-120 мин</div>
-                <div class="gtid-price__td">
-                  <a href="#" class="link gtid__link">Заказать <span class="link-arrow link-arrow--color"></span></a>
-                </div>
-                <div class="gtid-price__td">Замена программного обеспечения</div>
-                <div class="gtid-price__td">1000₽</div>
-                <div class="gtid-price__td">30-120 мин</div>
-                <div class="gtid-price__td">
-                  <a href="#" class="link gtid__link">Заказать <span class="link-arrow link-arrow--color"></span></a>
-                </div>
-          </div> -->
-        <div class="srv__wrapper srv--elem-pad">
-          <table class="table-price ">
-            <thead class="table-price__thead">
-              <tr class="table-price__row-head active--font">
-                <th class="table-price__th">Ремонтные услуги</th>
-                <th class="table-price__th">Цена</th>
-                <th class="table-price__th">Срок</th>
-                <th class="table-price__th"></th>
-              </tr>
-            </thead>
-            <tbody class="table-price__tbody">
-              <tr class="table-price__row-body">
-                <td class="table-price__td">Диагностика</td>
-                <td class="table-price__td">Бесплатно</td>
-                <td class="table-price__td">30 мин</td>
-                <td class="table-price__td">
-                  <a href="#" class="link table__link">Заказать <span class="link-arrow link-arrow--color"></span></a>
-                </td>
-              </tr>
-              <tr class="table-price__row-body">
-                <td class="table-price__td">Замена дисплея</td>
-                <td class="table-price__td">1000₽</td>
-                <td class="table-price__td">30-120 мин</td>
-                <td class="table-price__td">
-                  <a href="#" class="link table__link">Заказать <span class="link-arrow link-arrow--color"></span></a>
-                </td>
-              </tr>
-              <tr class="table-price__row-body">
-                <td class="table-price__td">Замена полифонического динамика</td>
-                <td class="table-price__td">1000₽</td>
-                <td class="table-price__td">30-120 мин</td>
-                <td class="table-price__td">
-                  <a href="#" class="link table__link">Заказать <span class="link-arrow link-arrow--color"></span></a>
-                </td>
-              </tr>
-              <tr class="table-price__row-body">
-                <td class="table-price__td">Тестирование с выдачей технического заключения</td>
-                <td class="table-price__td">1000₽</td>
-                <td class="table-price__td">30-120 мин</td>
-                <td class="table-price__td">
-                  <a href="#" class="link table__link">Заказать <span class="link-arrow link-arrow--color"></span></a>
-                </td>
-              </tr>
-              <tr class="table-price__row-body">
-                <td class="table-price__td">Замена программного обеспечения</td>
-                <td class="table-price__td">1000₽</td>
-                <td class="table-price__td">30-120 мин</td>
-                <td class="table-price__td">
-                  <a href="#" class="link table__link">Заказать <span class="link-arrow link-arrow--color"></span></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-      <div class="srv__wrapper">
-        <ul class="srv__list srv--elem-pad">
-        </ul>
-      </div>
-
-          <!-- <button class="srv__show">
-                <div class="srv__show--arrow about__check-box"></div>
-                <span class="srv__show--text">Показать все</span>
-            </button> -->
+          <div class="srv__wrapper">
+            <ul class="srv__list srv--elem-pad"></ul>
+          </div>
 
           <template id="price-template">
             <li class="srv__item srv__item--height-price">
               <dl class="srv__dl">
-                <dt class="srv__dt srv__dt-title active--font">Ремонтные услуги</dt>
+                <dt class="srv__dt srv__dt-title active--font">
+                  Ремонтные услуги
+                </dt>
                 <dd class="srv__dd">Замена программного обеспечения</dd>
                 <dt class="srv__dt srv__price active--font">Цена</dt>
                 <dd class="srv__dd">1000₽</dd>
@@ -344,11 +306,13 @@
                       <time datetime="30m 120m">30-120 мин</time>
                     </dd>
                   </div>
-                  <a href="#" class="link table__link">Заказать <span class="link-arrow link-arrow--color"></span></a>
+                  <a href="#" class="link table__link"
+                    >Заказать <span class="link-arrow link-arrow--color"></span
+                  ></a>
                 </div>
               </dl>
             </li>
-            </template>
+          </template>
         </section>
       </article>
     </main>
@@ -497,18 +461,6 @@
             id="lang_cn"
           />
           <label for="lang_cn" class="lang-pannel__label">CN</label>
-          <!-- <label  class="lang-pannel__label">
-                      <input class="lang-pannel__input " type="radio"  name="language" id="lang_ru" checked>
-                      RU
-                  </label>
-                  <label  class="lang-pannel__label">
-                      <input class="lang-pannel__input " type="radio"  name="language" id="lang_en">
-                      EN
-                  </label>
-                  <label  class="lang-pannel__label">
-                      <input class="lang-pannel__input " type="radio"  name="language" id="lang_cn">
-                      CN
-                  </label> -->
         </div>
       </footer>
     </aside>

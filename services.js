@@ -176,7 +176,8 @@ let btnListener = function (btn, elementShow) {
 if (window.innerWidth < 760) {
   LIST_COMMON.forEach((list, index) => {
     if (index === LIST_COMMON.length - 1) {
-      document.querySelector('.table-price').parentElement.style.display = "none"
+      document.querySelector(".table-price").parentElement.style.display =
+        "none";
       servicesValuesPrice.forEach((item, indexArr) => {
         let clone = TEMPLATE_PRICE.content.cloneNode(true);
         clone.querySelectorAll(".srv__dd").forEach((value, indexValue) => {
@@ -201,6 +202,7 @@ if (window.innerWidth < 760) {
     list.parentElement.appendChild(btnNext);
   });
 } else {
+  LIST_COMMON[LIST_COMMON.length-1].style.display = "none"
   LIST_COMMON_SHOWMORE.forEach((list) => {
     let btnShowList = makeElement("button", "srv__show");
     let arrow = makeElement("div", ["srv__show--arrow", "about__check-box"]);
