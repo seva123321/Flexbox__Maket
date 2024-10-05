@@ -1,18 +1,27 @@
-const ASIDE_LAYOUT = document.querySelector('.aside__layout');
-let burgerBtn = document.querySelector('.header__burger')
+const BTNS_OPEN_ASIDE = document.querySelectorAll(".btn--aside-open");
+const ASIDES_LAYOUT = document.querySelectorAll(".aside__layout");
 
-burgerBtn.addEventListener('click', function(){
-    ASIDE_LAYOUT.style.transform = 'translateX(0)';
-})
+BTNS_OPEN_ASIDE.forEach((btn) => {
+  let id = btn.getAttribute("data-aside-open");
+  btn.addEventListener("click", function () {
+    document.getElementById(`${id}`).style.transform = "translateX(0)";
+  });
+});
 
-ASIDE_LAYOUT.addEventListener('click',function(evt){
-let target = evt.target;
-    
-    if(target.classList.contains('aside__layout') && (window.innerWidth > 360) && (window.innerHeight < 1120)){
-        ASIDE_LAYOUT.style.transform = 'translateX(-100vw)';
+ASIDES_LAYOUT.forEach((aside) => {
+  let sign = Array.from(aside.classList).join().includes("left") ? -1 : 1;
+
+  console.log(aside)
+  
+  aside.addEventListener("click", (evt) => {
+      let target = evt.target;
+
+    if(target === aside && (window.innerWidth > 360) && (window.innerHeight < 1120)){
+      aside.style.transform = `translateX(${sign * 100}vw)`;
     }
-    if(target.classList.contains('header__close')){
-        ASIDE_LAYOUT.style.transform = 'translateX(-100vw)';
-    }
 
-})
+    if (target.classList.contains("header__close")) {
+      aside.style.transform = `translateX(${sign * 100}vw)`;
+    }
+  });
+});

@@ -13,7 +13,7 @@
     <header class="header">
       <div class="header__left-part">
         <div class="header__burger block__all-menu block__all-menu--line">
-          <label for="burger" class="link btn">
+          <label for="burger" class="link btn btn--aside-open" data-aside-open="asideMain">
             <img
               src="public/icons/burger.png"
               srcset="public/icons/burger.svg"
@@ -32,7 +32,7 @@
       <nav class="service">
         <ul class="service__list service__list--screen--big">
           <li class="item service__item">
-            <button class="btn">
+            <button class="btn btn--tel btn--aside-open" data-aside-open="asidePhone">
               <img
                 src="public/icons/call.png"
                 srcset="public/icons/call.svg"
@@ -41,7 +41,7 @@
             </button>
           </li>
           <li class="item service__item">
-            <button class="btn">
+            <button class="btn btn--chat btn--aside-open" data-aside-open="asideChat">
               <img
                 src="public/icons/chat.png"
                 srcset="public/icons/chat.svg"
@@ -84,27 +84,18 @@
       </nav>
     </header>
     <main class="main">
-      <div class="aside__layout">
-        <aside class="aside">
+      <div id="asideMain" class="aside__layout aside__layout--left-side">
+        <aside class="aside aside--main">
           <div>
             <header class="aside__header header">
               <div class="header__left-part">
-                <input
-                  class="header__close visibility-hidden"
-                  type="radio"
-                  name="all-menu"
-                  id="close-aside"
-                />
-                <label
-                  for="close-aside"
-                  class="header__close service__item btn"
-                >
+                <button  class="header__close service__item btn">
                   <img
                     src="public/icons/close.png"
                     srcset="public/icons/close.svg"
                     alt="Закрыть вкладку с меню"
                   />
-                </label>
+                </button>
                 <div class="header__logo service__item">
                   <img
                     src="public/icons/Group.png"
@@ -172,16 +163,16 @@
             <div class="aside__contacts">
               <ul class="aside__list">
                 <li class="aside__item">
-                  <button class="btn">
+                  <button class="btn btn--tel btn--aside-open" data-aside-open="asidePhone">
                     <img
                       src="public/icons/call.png"
                       srcset="public/icons/call.svg"
                       alt="Телефон"
                     />
-                  </buttonref=>
+                  </button>
                 </li>
                 <li class="aside__item">
-                  <button class="btn">
+                  <button class="btn btn--chat btn--aside-open" data-aside-open="asideChat">
                     <img
                       src="public/icons/chat.png"
                       srcset="public/icons/chat.svg"
@@ -484,6 +475,61 @@
         </div>
       </article>
     </main>
+    <div id="asideChat" class="aside__layout aside__layout--right-side">
+      <aside class="aside aside--chat">
+        <div>
+          <header class="aside--chat__header  aside__header">
+              <button  class="header__close header__close--chat service__item btn">
+                <img
+                  src="public/icons/close.png"
+                  srcset="public/icons/close.svg"
+                  alt="Закрыть вкладку с меню"
+                />
+              </button>
+              <h1 class="nav__head nav__head--left-line srv--elem-pad">Обратная связь</h1>
+          </header>
+            <form action="" class="form srv--elem-pad">
+              <input name="name"required type="text" class="form__input" placeholder="Имя">
+              <input name="phone"required type="tel" class="form__input" placeholder="Телефон">
+              <input name="email"required type="email" class="form__input" placeholder="Электронная почта">
+              <textarea name="msg" id="" class="form__textarea" placeholder="Сообщение" maxlength="200"></textarea>
+              <p class="form__text-inform">Нажимая “отправить”, вы даете 
+                согласие на <span>обработку персональных данных</span> и соглашаетесь с
+                 нашей <span>политикой конфиденциальности</span></p>
+              <button  class="form__subm btn table__link">Отправить
+              <span class="link-arrow link-arrow--color-btn"></span
+            ></button>
+            </form>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div id="asidePhone" class="aside__layout aside__layout--right-side">
+      <aside class="aside aside--chat">
+        <div>
+          <header class="aside--chat__header  aside__header">
+              <button class="header__close header__close--chat service__item btn">
+                <img
+                  src="public/icons/close.png"
+                  srcset="public/icons/close.svg"
+                  alt="Закрыть вкладку с меню"
+                />
+              </button>
+              <h1 class="nav__head nav__head--left-line srv--elem-pad">Заказать звонок</h1>
+          </header>
+            <form action="" class="form srv--elem-pad">
+              <input name="phone"required type="tel" class="form__input" placeholder="Телефон">
+              <p class="form__text-inform">Нажимая “отправить”, вы даете 
+                согласие на <span>обработку персональных данных</span> и соглашаетесь с
+                 нашей <span>политикой конфиденциальности</span></p>
+              <button  class="form__subm btn table__link">Отправить
+              <span class="link-arrow link-arrow--color-btn"></span
+            ></button>
+            </form>
+          </div>
+        </div>
+      </aside>
+    </div>
     <footer class="footer srv--elem-pad active--font">
       <div class="footer__item">
         &copy; 2019 CPS <br />Разработано командой Apesong
