@@ -111,6 +111,7 @@ body {
 @media screen and (min-width: 760px) {
   .srv__item {
     /* width: 224px; */
+    margin-right: 0;
     display: flex;
     align-items: center;
     background-color: #ffffff;
@@ -330,7 +331,7 @@ thead th:nth-child(4) {
   margin: auto;
   transform: rotate(-45deg);
 }
-.link-arrow--color {
+.link-arrow--color-btn {
   border-right: 3px solid #ffffff;
   border-bottom: 3px solid #ffffff;
 }
@@ -351,7 +352,6 @@ thead th:nth-child(4) {
   padding: 16px;
   font-size: 14px;
   width: 260px;
-
 }
 
 .srv__dt {
@@ -362,7 +362,7 @@ thead th:nth-child(4) {
 .srv__dd {
   margin-bottom: 16px;
 }
-.srv__dd:last-child{
+.srv__dd:last-child {
   margin-bottom: 0;
 }
 .srv__dt {
@@ -377,49 +377,31 @@ thead th:nth-child(4) {
   justify-content: space-between;
 }
 
-/*
-.gtid-price {
-  display: grid;
-  grid-template-columns: 348px minmax(74px, 1fr) minmax(81px, 1fr) minmax(119px, 1fr);
-  gap: 24px;
-  align-items: center;
-  text-wrap: nowrap;
+.text-inform {
   font-size: 14px;
-}
-.gtid-price__th {
-  text-align: left;
-
-}
-.gtid-price__td {
-  background-color: #ffffff;
-
-}
-.gtid__link {
-  display: flex;
-  align-items: center;
-  padding: 8px 12px;
-  width: 119px;
-  height: 32px;
-  background-color: #ff3e79;
-  border-radius: 16px 16px;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-wrap: nowrap;
-  letter-spacing: normal;
+  /* width: 470px; */
 }
 
-.link-arrow {
-  display: inline-block;
-  content: "";
-  width: 10px;
-  height: 10px;
-  margin:auto;
-  transform: rotate(-45deg);
+.text-inform--margin{
+  margin-bottom: 40px;
 }
- .link-arrow--color {
-  border-right: 3px solid #ffffff;
-  border-bottom: 3px solid #ffffff;
+
+@media screen and (min-width: 760px) {
+  .text-inform--margin{
+    margin-bottom: 65px;
+  }
 }
-*/
+
+.text-inform__content {
+  margin-bottom: 16px;
+  width: clamp(160px, 100%, 420px);
+}
+.text-inform__link {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1b1c21;
+}
+.link-arrow--color-text {
+  border-right: 3px solid #ff3e79;
+  border-bottom: 3px solid #ff3e79;
+}

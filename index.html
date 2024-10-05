@@ -12,7 +12,7 @@
   <body>
     <header class="header">
       <div class="header__left-part">
-        <div class="block__all-menu block__all-menu--line">
+        <div class="header__burger block__all-menu block__all-menu--line">
           <label for="burger" class="link btn">
             <img
               src="public/icons/burger.png"
@@ -32,22 +32,22 @@
       <nav class="service">
         <ul class="service__list service__list--screen--big">
           <li class="item service__item">
-            <a href="#" class="link btn">
+            <button class="btn">
               <img
                 src="public/icons/call.png"
                 srcset="public/icons/call.svg"
                 alt="Телефон"
               />
-            </a>
+            </button>
           </li>
           <li class="item service__item">
-            <a href="#" class="link btn">
+            <button class="btn">
               <img
                 src="public/icons/chat.png"
                 srcset="public/icons/chat.svg"
                 alt="Почта"
               />
-            </a>
+            </button>
           </li>
           <li class="item service__item">
             <a href="#" class="link btn">
@@ -84,6 +84,162 @@
       </nav>
     </header>
     <main class="main">
+      <div class="aside__layout">
+        <aside class="aside">
+          <div>
+            <header class="aside__header header">
+              <div class="header__left-part">
+                <input
+                  class="header__close visibility-hidden"
+                  type="radio"
+                  name="all-menu"
+                  id="close-aside"
+                />
+                <label
+                  for="close-aside"
+                  class="header__close service__item btn"
+                >
+                  <img
+                    src="public/icons/close.png"
+                    srcset="public/icons/close.svg"
+                    alt="Закрыть вкладку с меню"
+                  />
+                </label>
+                <div class="header__logo service__item">
+                  <img
+                    src="public/icons/Group.png"
+                    srcset="public/icons/Group.svg"
+                    alt="Логотип"
+                  />
+                </div>
+              </div>
+              <div class="aside__search service__item btn">
+                <img
+                  src="public/icons/search.png"
+                  srcset="public/icons/search.svg"
+                  alt="Поиск"
+                />
+              </div>
+            </header>
+            <section class="aside__nav">
+              <ul class="aside__list aside__list--vertical">
+                <li class="item">
+                  <a
+                    href="#"
+                    class="link aside__link aside__link--font active--font nav__head--left-line"
+                    >Ремонт техники</a
+                  >
+                </li>
+                <li class="item">
+                  <a href="#" class="link aside__link aside__link--font"
+                    >Услуги и сервисы</a
+                  >
+                </li>
+                <li class="item">
+                  <a href="#" class="link aside__link aside__link--font"
+                    >Корпоративным клиентам</a
+                  >
+                </li>
+                <li class="item">
+                  <a href="#" class="link aside__link aside__link--font"
+                    >Продавцам техники</a
+                  >
+                </li>
+                <li class="item">
+                  <a href="#" class="link aside__link aside__link--font"
+                    >Партнерам</a
+                  >
+                </li>
+                <li class="item">
+                  <a href="#" class="link aside__link aside__link--font"
+                    >Производителям</a
+                  >
+                </li>
+                <li class="item">
+                  <a href="#" class="link aside__link aside__link--font"
+                    >Наши сервисные центр</a
+                  >
+                </li>
+                <li class="item">
+                  <a href="#" class="link aside__link aside__link--font"
+                    >Контакты</a
+                  >
+                </li>
+              </ul>
+            </section>
+          </div>
+          <footer class="aside__footer">
+            <div class="aside__contacts">
+              <ul class="aside__list">
+                <li class="aside__item">
+                  <button class="btn">
+                    <img
+                      src="public/icons/call.png"
+                      srcset="public/icons/call.svg"
+                      alt="Телефон"
+                    />
+                  </buttonref=>
+                </li>
+                <li class="aside__item">
+                  <button class="btn">
+                    <img
+                      src="public/icons/chat.png"
+                      srcset="public/icons/chat.svg"
+                      alt="Почта"
+                    />
+                  </button>
+                </li>
+                <li class="aside__item">
+                  <a href="#" class="link btn">
+                    <img
+                      src="public/icons/profile.png"
+                      srcset="public/icons/profile.svg"
+                      alt="Профиль"
+                    />
+                  </a>
+                </li>
+              </ul>
+              <a
+                href="mailto:mail@cps.com"
+                class="aside__mail aside__link--font link"
+                >mail@cps.com</a
+              >
+              <a
+                href="tel:+78008908900"
+                class="aside__tel aside__link--font link"
+                ><span>8</span><span>800</span><span>890</span>8900</a
+              >
+            </div>
+            <div class="lang-pannel">
+              <input
+                class="lang-pannel__input visibility-hidden"
+                type="radio"
+                name="language"
+                id="lang_ru"
+                checked
+              />
+              <label for="lang_ru" class="lang-pannel__label">RU</label>
+
+              <input
+                class="lang-pannel__input visibility-hidden"
+                type="radio"
+                name="language"
+                id="lang_en"
+              />
+              <label for="lang_en" class="lang-pannel__label">EN</label>
+
+              <input
+                class="lang-pannel__input visibility-hidden"
+                type="radio"
+                name="language"
+                id="lang_cn"
+              />
+              <label for="lang_cn" class="lang-pannel__label">CN</label>
+            </div>
+          </footer>
+        </aside>
+      </div>
+
       <aticle>
         <nav class="nav">
           <h1 class="nav__head nav__head--left-line">Услуги и сервисы</h1>
@@ -228,7 +384,7 @@
                   <td class="table-price__td">
                     <a href="#" class="link table__link"
                       >Заказать
-                      <span class="link-arrow link-arrow--color"></span
+                      <span class="link-arrow link-arrow--color-btn"></span
                     ></a>
                   </td>
                 </tr>
@@ -239,7 +395,7 @@
                   <td class="table-price__td">
                     <a href="#" class="link table__link"
                       >Заказать
-                      <span class="link-arrow link-arrow--color"></span
+                      <span class="link-arrow link-arrow--color-btn"></span
                     ></a>
                   </td>
                 </tr>
@@ -252,7 +408,7 @@
                   <td class="table-price__td">
                     <a href="#" class="link table__link"
                       >Заказать
-                      <span class="link-arrow link-arrow--color"></span
+                      <span class="link-arrow link-arrow--color-btn"></span
                     ></a>
                   </td>
                 </tr>
@@ -265,7 +421,7 @@
                   <td class="table-price__td">
                     <a href="#" class="link table__link"
                       >Заказать
-                      <span class="link-arrow link-arrow--color"></span
+                      <span class="link-arrow link-arrow--color-btn"></span
                     ></a>
                   </td>
                 </tr>
@@ -278,7 +434,7 @@
                   <td class="table-price__td">
                     <a href="#" class="link table__link"
                       >Заказать
-                      <span class="link-arrow link-arrow--color"></span
+                      <span class="link-arrow link-arrow--color-btn"></span
                     ></a>
                   </td>
                 </tr>
@@ -307,164 +463,38 @@
                     </dd>
                   </div>
                   <a href="#" class="link table__link"
-                    >Заказать <span class="link-arrow link-arrow--color"></span
+                    >Заказать
+                    <span class="link-arrow link-arrow--color-btn"></span
                   ></a>
                 </div>
               </dl>
             </li>
           </template>
         </section>
+        <div class="text-inform text-inform--margin srv--elem-pad">
+          <p class="text-inform__content">
+            Все цены указаны с учетом НДС. Стоимость ремонта указана на
+            единичную услугу. Для получения коммерческого предложения на
+            постоянное обслуживание, оставьте заявку.
+          </p>
+          <a href="#" class="link text-inform__link">
+            Получить коммерческое предложение&nbsp;
+            <span class="link-arrow link-arrow--color-text"></span>
+          </a>
+        </div>
       </article>
     </main>
-    <input
-      class="header__burger visibility-hidden"
-      type="radio"
-      name="all-menu"
-      id="burger"
-    />
-    <aside class="aside">
-      <header class="aside__header header">
-        <div class="header__left-part">
-          <input
-            class="header__close visibility-hidden"
-            type="radio"
-            name="all-menu"
-            id="close-aside"
-          />
-          <label for="close-aside" class="header__close service__item btn">
-            <img
-              src="public/icons/close.png"
-              srcset="public/icons/close.svg"
-              alt="Закрыть вкладку с меню"
-            />
-          </label>
-          <div class="header__logo service__item">
-            <img
-              src="public/icons/Group.png"
-              srcset="public/icons/Group.svg"
-              alt="Логотип"
-            />
-          </div>
-        </div>
-        <div class="aside__search service__item btn">
-          <img
-            src="public/icons/search.png"
-            srcset="public/icons/search.svg"
-            alt="Поиск"
-          />
-        </div>
-      </header>
-      <section class="aside__nav">
-        <ul class="aside__list aside__list--vertical">
-          <li class="item">
-            <a
-              href="#"
-              class="link aside__link aside__link--font active--font nav__head--left-line"
-              >Ремонт техники</a
-            >
-          </li>
-          <li class="item">
-            <a href="#" class="link aside__link aside__link--font"
-              >Услуги и сервисы</a
-            >
-          </li>
-          <li class="item">
-            <a href="#" class="link aside__link aside__link--font"
-              >Корпоративным клиентам</a
-            >
-          </li>
-          <li class="item">
-            <a href="#" class="link aside__link aside__link--font"
-              >Продавцам техники</a
-            >
-          </li>
-          <li class="item">
-            <a href="#" class="link aside__link aside__link--font">Партнерам</a>
-          </li>
-          <li class="item">
-            <a href="#" class="link aside__link aside__link--font"
-              >Производителям</a
-            >
-          </li>
-          <li class="item">
-            <a href="#" class="link aside__link aside__link--font"
-              >Наши сервисные центр</a
-            >
-          </li>
-          <li class="item">
-            <a href="#" class="link aside__link aside__link--font">Контакты</a>
-          </li>
-        </ul>
-      </section>
-      <footer class="aside__footer">
-        <div class="aside__contacts">
-          <ul class="aside__list">
-            <li class="aside__item">
-              <a href="#" class="link btn">
-                <img
-                  src="public/icons/call.png"
-                  srcset="public/icons/call.svg"
-                  alt="Телефон"
-                />
-              </a>
-            </li>
-            <li class="aside__item">
-              <a href="#" class="link btn">
-                <img
-                  src="public/icons/chat.png"
-                  srcset="public/icons/chat.svg"
-                  alt="Телефон"
-                />
-              </a>
-            </li>
-            <li class="aside__item">
-              <a href="#" class="link btn">
-                <img
-                  src="public/icons/profile.png"
-                  srcset="public/icons/profile.svg"
-                  alt="Телефон"
-                />
-              </a>
-            </li>
-          </ul>
-          <a
-            href="mailto:mail@cps.com"
-            class="aside__mail aside__link--font link"
-            >mail@cps.com</a
-          >
-          <a href="tel:+78008908900" class="aside__tel aside__link--font link"
-            ><span>8</span><span>800</span><span>890</span>8900</a
-          >
-        </div>
-        <div class="lang-pannel">
-          <input
-            class="lang-pannel__input visibility-hidden"
-            type="radio"
-            name="language"
-            id="lang_ru"
-            checked
-          />
-          <label for="lang_ru" class="lang-pannel__label">RU</label>
-
-          <input
-            class="lang-pannel__input visibility-hidden"
-            type="radio"
-            name="language"
-            id="lang_en"
-          />
-          <label for="lang_en" class="lang-pannel__label">EN</label>
-
-          <input
-            class="lang-pannel__input visibility-hidden"
-            type="radio"
-            name="language"
-            id="lang_cn"
-          />
-          <label for="lang_cn" class="lang-pannel__label">CN</label>
-        </div>
-      </footer>
-    </aside>
-    <footer class="footer"></footer>
+    <footer class="footer srv--elem-pad active--font">
+      <div class="footer__item">
+        &copy; 2019 CPS <br />Разработано командой Apesong
+      </div>
+      <div class="footer__item">Политика конфиденциальности</div>
+      <div class="footer__item">
+        Информация, размещенная на данной странице, не является публичной
+        офертой
+      </div>
+    </footer>
     <script src="services.js" defer></script>
+    <script src="aside.js" defer></script>
   </body>
 </html>

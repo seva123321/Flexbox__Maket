@@ -1,18 +1,31 @@
 .aside {
-  width: 320px;
-  /* height: 100vh; */
+  width: clamp(320px, 100%, 360px);
+  height: 100vh;
   display: flex;
-  background-color:#FFFFFF ;
+  background-color: #ffffff;
   flex-direction: column;
+  justify-content: space-between;
   position: absolute;
+  z-index: 10;
+}
+
+.aside__layout {
+  width: 100vw;
+  height: 100vh;
+  transition: 0.3s;
+  transform: translateX(-100vw);
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  position: fixed;
   left: 0;
   top: 0;
-  transition: .3s;
-  transform: translateX(-320px);
+  bottom: 0;
 }
 
 .aside__header {
   padding: 16px;
+  padding-bottom: 0;
+  margin-bottom: 4px;
 }
 
 .service__item {
@@ -22,16 +35,16 @@
 }
 
 /* close aside  */
-.header__close:checked + .aside {
-  transform: translateX(-320px);
+.header__close:checked + .aside__layout {
+  transform: translateX(-100vw);
 }
 
 .aside__search {
 }
 
 .aside__nav {
-  padding: 24px 0;
-  flex-grow: 1;
+  /* padding: 24px 0;
+  flex-grow: 1; */
 }
 
 .aside__list {
@@ -44,9 +57,16 @@
 }
 
 .aside__link {
-  flex-grow: 1;
-  padding: 16px 24px;
+  padding: 12px 24px;
   position: relative;
+}
+@media screen and (min-width: 360px) {
+  .aside {
+    box-shadow: 16px 0px 52px 0px #0e185033;
+  }
+  .aside__link {
+    padding: 16px 24px;
+  }
 }
 
 /* .aside__link::after {
@@ -76,11 +96,16 @@
 }
 
 .aside__contacts {
-  margin: 16px;
-  margin-top: 0px;
-  margin-bottom: 40px;
+  margin: 0 16px;
+  margin-bottom: 8px;
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (min-width: 760px) {
+  .aside__contacts {
+    margin-bottom: 40px;
+  }
 }
 
 .aside__item {
@@ -119,7 +144,7 @@
 .lang-pannel__input {
 }
 
-.lang-pannel__input:checked + .lang-pannel__label{
+.lang-pannel__input:checked + .lang-pannel__label {
   color: #7e7e82;
 }
 
@@ -129,7 +154,7 @@
 }
 
 .btn {
-  transition: opacity, filter .25s;
+  transition: opacity, filter 0.25s;
   cursor: pointer;
 }
 
@@ -145,6 +170,8 @@
   -o-filter: brightness(0.5);
   filter: brightness(0.5);
 }
+
+
 
 /* .btn--burger:hover ~ .aside{
   transform: translateX(320px);

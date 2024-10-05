@@ -202,17 +202,28 @@ if (window.innerWidth < 760) {
     list.parentElement.appendChild(btnNext);
   });
 } else {
-  LIST_COMMON[LIST_COMMON.length-1].style.display = "none"
+  LIST_COMMON[LIST_COMMON.length - 1].style.display = "none";
+
   LIST_COMMON_SHOWMORE.forEach((list) => {
-    let btnShowList = makeElement("button", "srv__show");
-    let arrow = makeElement("div", ["srv__show--arrow", "about__check-box"]);
-    let textBtn = makeElement("span", "srv__show--text", "Показать все");
+    let CSSStyleDeclaration = getComputedStyle(LIST_COMMON_SHOWMORE[0]);
+    let gap = +CSSStyleDeclaration.gap.split("px").at(1);
+    let padding = +CSSStyleDeclaration.padding.split("px").at(1);
+    let itemWidth = +list.children[0].offsetWidth + gap;
+    let lengthElementsField =
+      list.children.length * itemWidth + padding * 2 - gap;
 
-    btnShowList.appendChild(arrow);
-    btnShowList.appendChild(textBtn);
+    // checking for the need to add buttons
+    if (lengthElementsField > window.innerWidth) {
+      let btnShowList = makeElement("button", "srv__show");
+      let arrow = makeElement("div", ["srv__show--arrow", "about__check-box"]);
+      let textBtn = makeElement("span", "srv__show--text", "Показать все");
 
-    list.closest(".srv").appendChild(btnShowList);
+      btnShowList.appendChild(arrow);
+      btnShowList.appendChild(textBtn);
 
-    btnListener(btnShowList, list);
+      list.closest(".srv").appendChild(btnShowList);
+
+      btnListener(btnShowList, list);
+    }
   });
 }
