@@ -1,15 +1,13 @@
 @font-face {
-  font-family: "TT-Lakes--regular";
-  src: url("public/fonts/TTLakesCompressed-Regular.eot");
-  src: local("TT Lakes Compressed Regular"), local("TTLakesCompressed-Regular"),
-    url("public/fonts/TTLakesCompressed-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("public/fonts/TTLakesCompressed-Regular.woff") format("woff"),
-    url("public/fonts/TTLakesCompressed-Regular.ttf") format("truetype");
+  font-family: 'TT Lakes--regular';
+  src: url('public/fonts/TTLakes-Regular.eot');
+  src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+      url('public/fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+      url('public/fonts/TTLakes-Regular.woff') format('woff'),
+      url('public/fonts/TTLakes-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-
 html {
   box-sizing: border-box;
 }

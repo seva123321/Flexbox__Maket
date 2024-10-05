@@ -11,8 +11,6 @@ BTNS_OPEN_ASIDE.forEach((btn) => {
 ASIDES_LAYOUT.forEach((aside) => {
   let sign = Array.from(aside.classList).join().includes("left") ? -1 : 1;
 
-  console.log(aside)
-  
   aside.addEventListener("click", (evt) => {
       let target = evt.target;
 

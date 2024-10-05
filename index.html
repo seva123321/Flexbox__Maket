@@ -13,13 +13,13 @@
     <header class="header">
       <div class="header__left-part">
         <div class="header__burger block__all-menu block__all-menu--line">
-          <label for="burger" class="link btn btn--aside-open" data-aside-open="asideMain">
+          <button  class="link btn btn--aside-open" data-aside-open="asideMain">
             <img
               src="public/icons/burger.png"
               srcset="public/icons/burger.svg"
               alt="Меню"
             />
-          </label>
+          </button>
         </div>
         <div class="header__logo">
           <img
@@ -87,9 +87,9 @@
       <div id="asideMain" class="aside__layout aside__layout--left-side">
         <aside class="aside aside--main">
           <div>
-            <header class="aside__header header">
-              <div class="header__left-part">
-                <button  class="header__close service__item btn">
+            <header class="aside__header">
+              <div class="aside__left-part">
+                <button  class="header__close header__close--main service__item btn">
                   <img
                     src="public/icons/close.png"
                     srcset="public/icons/close.svg"
@@ -254,7 +254,7 @@
             </li>
           </ul>
         </nav>
-        <section class="about">
+        <section class="about about--margin">
           <div class="about__inner">
             <input
               class="about__read visibility-hidden"
@@ -488,15 +488,15 @@
               </button>
               <h1 class="nav__head nav__head--left-line srv--elem-pad">Обратная связь</h1>
           </header>
-            <form action="" class="form srv--elem-pad">
-              <input name="name"required type="text" class="form__input" placeholder="Имя">
-              <input name="phone"required type="tel" class="form__input" placeholder="Телефон">
-              <input name="email"required type="email" class="form__input" placeholder="Электронная почта">
-              <textarea name="msg" id="" class="form__textarea" placeholder="Сообщение" maxlength="200"></textarea>
+            <form  id="feedback" action="#" class="form srv--elem-pad">
+              <input  class="form__input" name="name" required type="text" placeholder="Имя">
+              <input  class="form__input" name="phone" required type="tel" placeholder="Телефон">
+              <input  class="form__input" name="email" required type="email" placeholder="Электронная почта">
+              <textarea name="msg" class="form__textarea" placeholder="Сообщение" maxlength="200"></textarea>
               <p class="form__text-inform">Нажимая “отправить”, вы даете 
                 согласие на <span>обработку персональных данных</span> и соглашаетесь с
                  нашей <span>политикой конфиденциальности</span></p>
-              <button  class="form__subm btn table__link">Отправить
+              <button  type="submit" class="form__subm btn table__link">Отправить
               <span class="link-arrow link-arrow--color-btn"></span
             ></button>
             </form>
@@ -517,7 +517,7 @@
               </button>
               <h1 class="nav__head nav__head--left-line srv--elem-pad">Заказать звонок</h1>
           </header>
-            <form action="" class="form srv--elem-pad">
+            <form id="phone" action="#" class="form srv--elem-pad">
               <input name="phone"required type="tel" class="form__input" placeholder="Телефон">
               <p class="form__text-inform">Нажимая “отправить”, вы даете 
                 согласие на <span>обработку персональных данных</span> и соглашаетесь с
