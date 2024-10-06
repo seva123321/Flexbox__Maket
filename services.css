@@ -8,34 +8,14 @@
   font-weight: normal;
   font-style: normal;
 }
-html {
-  box-sizing: border-box;
-}
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
 
-* {
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  height: 100vh;
-  background-color: #f8f8f8;
-  font-family: "TT Lakes Compressed", sans-serif;
-  color: #1b1c21;
-}
 
 .srv {
-  border-bottom: 32px solid transparent;
 }
 .srv-header {
   text-transform: uppercase;
-  font-family: "TT-Lakes--regular", sans-serif;
   padding: 16px 32px;
   background: linear-gradient(50deg, #f8f8f8 0%, #ffffff 98.61%);
 }
@@ -67,7 +47,6 @@ body {
   padding: 16px;
 }
 
-/* @media screen and (min-width: 768px) { */
 @media screen and (min-width: 760px) {
   .srv--elem-pad {
     padding: 16px 24px;
@@ -84,7 +63,6 @@ body {
 }
 
 .srv__item {
-  /* width: 224px; */
   margin-right: 16px;
   display: flex;
   align-items: center;
@@ -108,7 +86,6 @@ body {
 /* @media screen and (min-width: 330px) { */
 @media screen and (min-width: 760px) {
   .srv__item {
-    /* width: 224px; */
     margin-right: 0;
     display: flex;
     align-items: center;
@@ -120,7 +97,6 @@ body {
 
 .srv__title {
   color: #1b1c21;
-  font-family: "TT-Lakes--regular", sans-serif;
   font-size: 16px;
 }
 .srv__title--pad {
@@ -131,7 +107,6 @@ body {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
-  /* width: 224px; */
   width: 240px;
 }
 
@@ -147,8 +122,6 @@ body {
   align-self: center;
 }
 .srv__go {
-  /* margin-right: 16px;
-  width: 40px; */
   align-self: end;
   padding: 16px;
 }
@@ -158,7 +131,6 @@ body {
   cursor: pointer;
 }
 
-/* @media screen and (min-width: 768px) { */
 @media screen and (min-width: 760px) {
   .srv__show {
     margin: 24px;
@@ -180,10 +152,9 @@ body {
 }
 
 .srv__show--text {
-  font-family: "TT-Lakes--regular", sans-serif;
+  font-family: "TT Lakes--w500", sans-serif;
   color: #1b1c21;
   font-size: 16px;
-  font-weight: 500;
   line-height: 24px;
 }
 
@@ -192,10 +163,8 @@ body {
 
 .swiper-pannel {
   width: 204px;
-  /* height: 12px; */
   display: flex;
   justify-content: center;
-  /* float: left; */
   margin: 0 auto;
 }
 
@@ -205,7 +174,6 @@ body {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  /* margin-right: 12px; */
   margin-right: 7px;
   cursor: pointer;
   transition: 0.3s;
@@ -229,8 +197,6 @@ body {
   top: 0;
   left: 0;
   cursor: pointer;
-
-  /* background-color: #93b773; */
 }
 
 .swiper-button-next {
@@ -240,12 +206,10 @@ body {
   right: 0;
   top: 0;
   cursor: pointer;
-  /* background-color: #737db7; */
 }
 
 .table-price {
   border-collapse: collapse;
-  /* padding: 16px 24px; */
   table-layout: fixed;
   width: 100%;
   text-align: left;
@@ -271,6 +235,7 @@ thead th:nth-child(4) {
 }
 
 .table-price__thead {
+  font-family: "TT Lakes--w500", sans-serif;
 }
 .table-price__tbody {
   background-color: #ffffff;
@@ -283,30 +248,23 @@ thead th:nth-child(4) {
 .table-price__row-body {
   height: 65px;
   vertical-align: middle;
-  /* padding: 0 16px; */
   border-bottom: 1px solid #eaeaea;
 }
 .table-price__row-body:last-child {
   border-bottom: none;
 }
 .table-price__th {
-  /* padding: 16px 24px; */
 }
 .table-price__th:first-child {
-  /* text-align: right;
-  text-align: -webkit-right; */
   padding-left: 16px;
 }
 .table-price__td {
-  /* padding: 12px 0; */
 }
 .table-price__td:last-child {
   text-align: right;
   padding-right: 16px;
 }
 .table-price__td:first-child {
-  /* text-align: right;
-  text-align: -webkit-right; */
   padding-left: 16px;
 }
 .table__link {
@@ -316,7 +274,7 @@ thead th:nth-child(4) {
   border-radius: 16px 16px;
   color: #ffffff;
   font-size: 12px;
-  font-weight: bold;
+  font-family: "TT Lakes--bold", sans-serif;
   text-transform: uppercase;
   text-wrap: nowrap;
   letter-spacing: normal;
@@ -334,17 +292,7 @@ thead th:nth-child(4) {
   border-bottom: 3px solid #ffffff;
 }
 
-/* .srv__list--price {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px;
-  align-items: center;
-  text-wrap: nowrap;
-  font-size: 14px;
-} */
-
 .srv__item--height-price {
-  /* height: 200px; */
 }
 .srv__dl {
   padding: 16px;
@@ -377,7 +325,6 @@ thead th:nth-child(4) {
 
 .text-inform {
   font-size: 14px;
-  /* width: 470px; */
 }
 
 .text-inform--margin{
@@ -396,7 +343,7 @@ thead th:nth-child(4) {
 }
 .text-inform__link {
   font-size: 16px;
-  font-weight: 600;
+  font-family: "TT Lakes--bold", sans-serif;
   color: #1b1c21;
 }
 .link-arrow--color-text {

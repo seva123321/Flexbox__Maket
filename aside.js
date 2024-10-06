@@ -15,11 +15,11 @@ ASIDES_LAYOUT.forEach((aside) => {
       let target = evt.target;
 
     if(target === aside && (window.innerWidth > 360) && (window.innerHeight < 1120)){
-      aside.style.transform = `translateX(${sign * 100}vw)`;
+      aside.style.transform = `translateX(${sign * 400}vw)`;
     }
 
     if (target.classList.contains("header__close")) {
-      aside.style.transform = `translateX(${sign * 100}vw)`;
+      aside.style.transform = `translateX(${sign * 400}vw)`;
     }
   });
 });
