@@ -1,0 +1,12 @@
+.lang-pannel {
+  margin: 0 24px 32px 24px;
+
+  &__input:checked + &__label {
+    color: #7e7e82;
+  }
+
+  &__label {
+    cursor: pointer;
+    margin-right: 5px;
+  }
+}

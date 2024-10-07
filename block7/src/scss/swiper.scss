@@ -1,0 +1,47 @@
+.swiper-pannel {
+  width: 204px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.swiper-pagination {
+  display: inline-block;
+  background-color: #dddddd;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 7px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $textColor;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  &--active {
+    background-color: #b5b6bc;
+  }
+}
+
+.swiper-button-prev {
+  position: absolute;
+  height: 90%;
+  width: 20%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.swiper-button-next {
+  position: absolute;
+  height: 90%;
+  width: 20%;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}

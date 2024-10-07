@@ -1,0 +1,53 @@
+.service {
+  display: flex;
+  margin-left: auto;
+
+  .item__text {
+    padding: 8px;
+    @media screen and (max-width: 958px) {
+      // $screen-xl
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      clip: rect(0, 0, 0, 0);
+      overflow: hidden;
+    }
+  }
+
+  &__item {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+
+    &--line::before {
+      content: '';
+      display: inline-block;
+      width: 2px;
+      height: 32px;
+      background-color: #eaeaea;
+      margin-right: 12px;
+      @media screen and (min-width: $screen-xxl) {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    
+    &--screen--big {
+      display: none;
+      @media screen and (min-width: $screen-md) {
+          display: flex;
+      }
+  
+      @media screen and (min-width: $screen-xxl) {
+          display: none;
+      }
+    }
+  }
+
+}

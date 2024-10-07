@@ -1,0 +1,118 @@
+@import 'fonts';
+$fontRegular: 'TT Lakes--regular', sans-serif;
+$fontMedium: 'TT Lakes--w500', sans-serif;
+$fontBold: 'TT Lakes--bold', sans-serif;
+$screen-vsm: 320px;
+$screen-sm: 360px;
+$screen-md: 500px;
+$screen-lg: 768px;
+$screen-xl: 1140px;
+$screen-xxl: 1440px;
+$textColor: #1b1c21;
+$activeColor:  #7e7e82;
+@import 'header';
+@import 'service';
+@import 'aside';
+@import 'form';
+@import 'nav';
+@import 'about';
+@import 'srv';
+@import 'table';
+@import 'text_block';
+@import 'swiper';
+@import 'footer';
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  height: 100vh;
+  background-color: #f8f8f8;
+  font-family: $fontRegular;
+  color: $textColor;
+
+  @media screen and (min-width: $screen-xxl) {
+    & {
+      /* float: right; */
+      margin-left: 322px;
+    }
+  }
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+button img {
+  pointer-events: none;
+}
+
+h2,
+h3 {
+  font-family: $fontMedium;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s;
+}
+
+.visibility-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.active--font {
+  color: $activeColor;
+}
+
+.srv--elem-pad {
+  padding: 16px;
+  @media screen and (min-width: 760px) {
+    .srv--elem-pad {
+      padding: 16px 24px;
+    }
+  }
+  @media screen and (min-width: 1120px) {
+    .srv--elem-pad {
+      padding: 16px 32px;
+    }
+  }
+}

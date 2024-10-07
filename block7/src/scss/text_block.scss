@@ -1,0 +1,32 @@
+.text-inform {
+  font-size: 14px;
+
+  &__content {
+    margin-bottom: 16px;
+    width: clamp(160px, 100%, 420px);
+  }
+  &__link {
+    font-size: 16px;
+    font-family: $fontBold;
+    color: $textColor;
+  }
+  .link-arrow {
+    display: inline-block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    transform: rotate(-45deg);
+
+    &--color-text {
+      border-right: 3px solid #ff3e79;
+      border-bottom: 3px solid #ff3e79;
+    }
+  }
+  &--margin {
+    margin-bottom: 40px;
+    @media screen and (min-width: 760px) {
+      margin-bottom: 65px;
+    }
+  }
+}

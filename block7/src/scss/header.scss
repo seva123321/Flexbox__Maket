@@ -1,0 +1,58 @@
+@import 'btn';
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 16px 8px;
+  background-color: #fff;
+
+  @media screen and (min-width: $screen-xxl) {
+    background: none;
+    float: right;
+  }
+  .link {
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.25s;
+  }
+  .block__all-menu {
+    padding: 8px;
+
+    @media screen and (min-width: $screen-sm) {
+      &--line::after {
+        content: '';
+        display: inline-block;
+        width: 2px;
+        height: 32px;
+        background-color: #eaeaea;
+        margin-left: 12px;
+      }
+    }
+  }
+
+  &__left-part {
+    display: flex;
+    align-items: center;
+    @media screen and (min-width: $screen-xxl) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    padding: 8px;
+    display: inline-block;
+  }
+
+  &__close--chat {
+    padding-left: 16px;
+    @media screen and (min-width: $screen-md) {
+      margin-right: 24px;
+    }
+  }
+
+  @media screen and (min-width: $screen-xxl) {
+    &__close--main {
+      display: none;
+    }
+  }
+}
