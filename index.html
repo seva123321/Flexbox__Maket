@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Exercise BEM</title>
+    <link rel="shortcut icon" href="../img/icons/Group.svg">
+  <link href="style.css" rel="stylesheet"></head>
+  <body>
+    <header class="header">
+      <div class="header__left-part">
+        <div class="header__burger block__all-menu block__all-menu--line">
+          <button class="link btn btn--aside-open" data-aside-open="asideMain">
+            <img src="img/icons/burger.png" srcset="img/icons/burger.svg" alt="Меню">
+          </button>
+        </div>
+        <div class="header__logo">
+          <img src="img/icons/Group.png" srcset="img/icons/Group.svg" alt="Логотип">
+        </div>
+      </div>
+      <nav class="service">
+        <ul class="service__list service__list--screen--big">
+          <li class="service__item">
+            <button class="btn btn--tel btn--aside-open" data-aside-open="asidePhone">
+              <img src="img/icons/call.png" srcset="img/icons/call.svg" alt="Телефон">
+            </button>
+          </li>
+          <li class="service__item">
+            <button class="btn btn--chat btn--aside-open" data-aside-open="asideChat">
+              <img src="img/icons/chat.png" srcset="img/icons/chat.svg" alt="Почта">
+            </button>
+          </li>
+          <li class="service__item">
+            <a href="#" class="link btn">
+              <img src="img/icons/profile.png" srcset="img/icons/profile.svg" alt="Профиль">
+            </a>
+          </li>
+        </ul>
+        <ul class="service__list">
+          <li class="service__item service__item--line">
+            <div class="item__text">Оставить заявку</div>
+            <a href="#" class="link btn">
+              <img src="img/icons/repair.png" srcset="img/icons/repair.svg" alt="Оставить заявку">
+            </a>
+          </li>
+          <li class="service__item">
+            <div class="item__text">Статус ремонта</div>
+            <a href="#" class="link btn">
+              <img src="img/icons/checkstatus.png" srcset="img/icons/checkstatus.svg" alt="Статус ремонта">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="asideMain" class="aside__layout aside__layout--left-side">
+        <aside class="aside aside--main">
+          <div>
+            <header class="aside__header aside__header--main">
+              <div class="aside__left-part">
+                <button class="header__close header__close--main service__item btn">
+                  <img src="img/icons/close.png" srcset="img/icons/close.svg" alt="Закрыть вкладку с меню">
+                </button>
+                <div class="header__logo service__item">
+                  <img src="img/icons/Group.png" srcset="img/icons/Group.svg" alt="Логотип">
+                </div>
+              </div>
+              <div class="aside__search service__item btn">
+                <img src="img/icons/search.png" srcset="img/icons/search.svg" alt="Поиск">
+              </div>
+            </header>
+            <section class="aside__nav">
+              <ul class="aside__list aside__list--vertical">
+                <li class="item">
+                  <a href="#" class="link aside__link aside__link--font">Ремонт техники</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link aside__link aside__link--font">Услуги и сервисы</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link aside__link aside__link--font">Корпоративным клиентам</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link aside__link aside__link--font">Продавцам техники</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link aside__link aside__link--font">Партнерам</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link aside__link aside__link--font">Производителям</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link aside__link aside__link--font">Наши сервисные центр</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link aside__link aside__link--font">Контакты</a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <footer class="aside__footer">
+            <div class="aside__contacts">
+              <ul class="aside__list">
+                <li class="aside__item">
+                  <button class="btn btn--tel btn--aside-open" data-aside-open="asidePhone">
+                    <img src="img/icons/call.png" srcset="img/icons/call.svg" alt="Телефон">
+                  </button>
+                </li>
+                <li class="aside__item">
+                  <button class="btn btn--chat btn--aside-open" data-aside-open="asideChat">
+                    <img src="img/icons/chat.png" srcset="img/icons/chat.svg" alt="Почта">
+                  </button>
+                </li>
+                <li class="aside__item">
+                  <a href="#" class="link btn">
+                    <img src="img/icons/profile.png" srcset="img/icons/profile.svg" alt="Профиль">
+                  </a>
+                </li>
+              </ul>
+              <a href="mailto:mail@cps.com" class="aside__mail aside__link--font link">mail@cps.com</a>
+              <a href="tel:+78008908900" class="aside__tel aside__link--font link"><span>8</span><span>800</span><span>890</span>8900</a>
+            </div>
+            <div class="lang-pannel">
+              <input class="lang-pannel__input visibility-hidden" type="radio" name="language" id="lang_ru" checked="checked">
+              <label for="lang_ru" class="lang-pannel__label">RU</label>
+
+              <input class="lang-pannel__input visibility-hidden" type="radio" name="language" id="lang_en">
+              <label for="lang_en" class="lang-pannel__label">EN</label>
+
+              <input class="lang-pannel__input visibility-hidden" type="radio" name="language" id="lang_cn">
+              <label for="lang_cn" class="lang-pannel__label">CN</label>
+            </div>
+          </footer>
+        </aside>
+      </div>
+
+      <aticle>
+        <nav class="nav">
+          <h1 class="nav__head nav__head--left-line">Услуги и сервисы</h1>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="link nav__link nav__link--active">
+                Ремонтируемые устройства
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="link nav__link"> Дополнительные услуги </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="link nav__link"> Цены на услуги </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="link nav__link"> Адреса сервисных центров </a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="link nav__link"> Специальные цены </a>
+            </li>
+          </ul>
+        </nav>
+        <section class="about about--margin">
+          <div class="about__inner">
+            <input class="about__read visibility-hidden" type="checkbox" id="read">
+            <div class="about__content">
+              <p class="about__text">
+                Мы являемся авторизованным сервисным центром по ремонту техники
+                Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+                официальной гарантией производителя.
+              </p>
+              <p class="about__text">
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                партнера, что подтверждает большое количество постоянных
+                клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
+                и, в свою очередь, советуют нас родным и близким.
+              </p>
+              <p class="about__text">
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                партнера, что подтверждает большое количество постоянных
+                клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
+                и, в свою очередь, советуют нас родным и близким.
+              </p>
+              <p class="about__text">
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                партнера, что подтверждает большое количество постоянных
+                клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
+                и, в свою очередь, советуют нас родным и близким.
+              </p>
+              <p class="about__text">
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                партнера, что подтверждает большое количество постоянных
+                клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
+                и, в свою очередь, советуют нас родным и близким.
+              </p>
+            </div>
+            <div class="about__show-pannel">
+              <button class="about__check-box"></button>
+              <label for="read" class="about__label"> Читать Далее </label>
+            </div>
+          </div>
+
+          <div class="about__img"></div>
+        </section>
+      </aticle>
+      <article>
+        <section class="srv">
+          <h2 class="srv__header srv--elem-pad active--font">
+            Ремонт техники различных брендов
+          </h2>
+
+          <div class="srv__wrapper">
+            <ul class="srv__list srv__list--showmore srv--elem-pad"></ul>
+          </div>
+
+          <template id="brand-template">
+            <li class="srv__item srv__item--height-brand">
+              <a href="#" class="link srv__link">
+                <img src="img/imgContent/ViewSonic-logo.svg" alt="ViewSonic-logo" class="srv__logo">
+                <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+              </a>
+            </li>
+          </template>
+        </section>
+        <section class="srv">
+          <h2 class="srv__header srv--elem-pad active--font">
+            Ремонт различных видов техники
+          </h2>
+
+          <div class="srv__wrapper">
+            <ul class="srv__list srv__list--showmore srv--elem-pad"></ul>
+          </div>
+
+          <template id="technique-template">
+            <li class="srv__item srv__item--height-technique">
+              <a href="#" class="link srv__link srv__link--height-technique">
+                <h3 class="srv__title srv__title--pad">Ремонт ноутбуков</h3>
+                <img src="img/icons/go.png" srcset="img/icons/go.svg" alt="Перейти" class="srv__go">
+              </a>
+            </li>
+          </template>
+        </section>
+        <section class="srv">
+          <h2 class="srv__header srv--elem-pad active--font">Цены на услуги</h2>
+          <div class="srv__wrapper srv--elem-pad">
+            <table class="table">
+              <thead class="table__thead">
+                <tr class="table__row-head active--font">
+                  <th class="table__th">Ремонтные услуги</th>
+                  <th class="table__th">Цена</th>
+                  <th class="table__th">Срок</th>
+                  <th class="table__th"></th>
+                </tr>
+              </thead>
+              <tbody class="table__tbody">
+                <tr class="table__row-body">
+                  <td class="table__td">Диагностика</td>
+                  <td class="table__td">Бесплатно</td>
+                  <td class="table__td">30 мин</td>
+                  <td class="table__td">
+                    <a href="#" class="link table__link">Заказать
+                      <span class="link-arrow link-arrow--color-btn"></span></a>
+                  </td>
+                </tr>
+                <tr class="table__row-body">
+                  <td class="table__td">Замена дисплея</td>
+                  <td class="table__td">1000₽</td>
+                  <td class="table__td">30-120 мин</td>
+                  <td class="table__td">
+                    <a href="#" class="link table__link">Заказать
+                      <span class="link-arrow link-arrow--color-btn"></span></a>
+                  </td>
+                </tr>
+                <tr class="table__row-body">
+                  <td class="table__td">
+                    Замена полифонического динамика
+                  </td>
+                  <td class="table__td">1000₽</td>
+                  <td class="table__td">30-120 мин</td>
+                  <td class="table__td">
+                    <a href="#" class="link table__link">Заказать
+                      <span class="link-arrow link-arrow--color-btn"></span></a>
+                  </td>
+                </tr>
+                <tr class="table__row-body">
+                  <td class="table__td">
+                    Тестирование с выдачей технического заключения
+                  </td>
+                  <td class="table__td">1000₽</td>
+                  <td class="table__td">30-120 мин</td>
+                  <td class="table__td">
+                    <a href="#" class="link table__link">Заказать
+                      <span class="link-arrow link-arrow--color-btn"></span></a>
+                  </td>
+                </tr>
+                <tr class="table__row-body">
+                  <td class="table__td">
+                    Замена программного обеспечения
+                  </td>
+                  <td class="table__td">1000₽</td>
+                  <td class="table__td">30-120 мин</td>
+                  <td class="table__td">
+                    <a href="#" class="link table__link">Заказать
+                      <span class="link-arrow link-arrow--color-btn"></span></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="srv__wrapper">
+            <ul class="srv__list srv--elem-pad"></ul>
+          </div>
+
+          <template id="price-template">
+            <li class="srv__item srv__item--height-price">
+              <dl class="srv__dl">
+                <dt class="srv__dt srv__dt-title active--font">
+                  Ремонтные услуги
+                </dt>
+                <dd class="srv__dd">Замена программного обеспечения</dd>
+                <dt class="srv__dt srv__price active--font">Цена</dt>
+                <dd class="srv__dd">1000₽</dd>
+                <div class="srv__dt-dd--wrapper">
+                  <div>
+                    <dt class="srv__dt srv__time active--font">Срок</dt>
+                    <dd class="srv__dd">
+                      <time datetime="30m 120m">30-120 мин</time>
+                    </dd>
+                  </div>
+                  <a href="#" class="link table__link">Заказать
+                    <span class="link-arrow link-arrow--color-btn"></span></a>
+                </div>
+              </dl>
+            </li>
+          </template>
+        </section>
+        <div class="text-inform text-inform--margin srv--elem-pad">
+          <p class="text-inform__content">
+            Все цены указаны с учетом НДС. Стоимость ремонта указана на
+            единичную услугу. Для получения коммерческого предложения на
+            постоянное обслуживание, оставьте заявку.
+          </p>
+          <a href="#" class="link text-inform__link">
+            Получить коммерческое предложение&nbsp;
+            <span class="link-arrow link-arrow--color-text"></span>
+          </a>
+        </div>
+      </article>
+    </main>
+    <div id="asideChat" class="aside__layout aside__layout--right-side">
+      <aside class="aside aside--chat">
+        <div>
+          <header class="aside__header--chat aside__header">
+              <button class="header__close header__close--chat service__item btn">
+                <img src="img/icons/close.png" srcset="img/icons/close.svg" alt="Закрыть вкладку с меню">
+              </button>
+              <h1 class="nav__head nav__head--left-line">Обратная связь</h1>
+          </header>
+            <form id="feedback" action="#" class="form">
+              <input class="form__input" name="name" required type="text" placeholder="Имя">
+              <input class="form__input" name="phone" value required type="tel" placeholder="Телефон">
+              <input class="form__input" name="email" required type="email" placeholder="Электронная почта">
+              <textarea name="msg" class="form__textarea" placeholder="Сообщение" maxlength="200"></textarea>
+              <p class="form__text-inform">Нажимая “отправить”, вы даете 
+                согласие на <i>обработку персональных данных</i> и соглашаетесь с
+                 нашей <i>политикой конфиденциальности</i></p>
+              <button type="submit" class="form__subm btn table__link">Отправить
+              <span class="link-arrow link-arrow--color-btn"></span></button>
+            </form>
+          </div>
+        </aside></div>
+      
+    
+    <div id="asidePhone" class="aside__layout aside__layout--right-side">
+      <aside class="aside aside--chat">
+        <div>
+          <header class="aside--chat__header aside__header">
+              <button class="header__close header__close--chat service__item btn">
+                <img src="img/icons/close.png" srcset="img/icons/close.svg" alt="Закрыть вкладку с меню">
+              </button>
+              <h1 class="nav__head nav__head--left-line">Заказать звонок</h1>
+          </header>
+            <form id="phone" action="#" class="form srv--elem-pad">
+              <input name="phone" required type="tel" class="form__input" placeholder="Телефон">
+              <p class="form__text-inform">Нажимая “отправить”, вы даете 
+                согласие на <i>обработку персональных данных</i> и соглашаетесь с
+                 нашей <i>политикой конфиденциальности</i></p>
+              <button class="form__subm btn table__link">Отправить
+              <span class="link-arrow link-arrow--color-btn"></span></button>
+            </form>
+          </div>
+        </aside></div>
+      
+    
+    <footer class="footer srv--elem-pad active--font">
+      <div class="footer__item">
+        &copy; 2019 CPS <br>Разработано командой Apesong
+      </div>
+      <div class="footer__item">Политика конфиденциальности</div>
+      <div class="footer__item">
+        Информация, размещенная на данной странице, не является публичной
+        офертой
+      </div>
+    </footer>
+  <script type="text/javascript" src="./js/bundle.js"></script></body>
+</html>
