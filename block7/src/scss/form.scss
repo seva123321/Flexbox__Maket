@@ -1,7 +1,8 @@
 .form {
   display: flex;
   flex-direction: column;
-
+  padding: 16px;
+  padding-top: 0;
   .link {
     text-decoration: none;
     cursor: pointer;
@@ -11,9 +12,9 @@
   .table__link {
     display: inline;
     padding: 9px 21px;
-    background-color: #ff3e79;
+    background-color: $btnLinkPurple;
     border-radius: 16px 16px;
-    color: #ffffff;
+    color: $whiteColor;
     font-size: 12px;
     font-family: $fontBold;
     text-transform: uppercase;
@@ -24,13 +25,13 @@
   .link-arrow {
     display: inline-block;
     content: '';
-    width: 10px;
-    height: 10px;
+    width: 6px;
+    height: 6px;
     margin: auto;
     transform: rotate(-45deg);
     &--color-btn {
-      border-right: 3px solid #ffffff;
-      border-bottom: 3px solid #ffffff;
+      border-right: 3px solid $whiteColor;
+      border-bottom: 3px solid $whiteColor;
     }
   }
 
@@ -53,25 +54,24 @@
     margin-bottom: 16px;
   }
   &__textarea {
+    resize: none;
     padding: 16px;
     border: 1px solid #eaeaea;
     border-radius: 10px 10px;
-    // max-width: 100%;
-    // min-width: 100%;
     min-height: 118px;
     margin-bottom: 16px;
   }
 
   &__text-inform {
     margin-bottom: 16px;
-    color: #7e7e82;
+    color: $activeColor;
     font-size: 14px;
     & i {
-      color: #ff3e79;
+      color: $btnLinkPurple;
     }
   }
 
   &__subm {
-    align-self: end;
+    align-self: flex-end;
   }
 }

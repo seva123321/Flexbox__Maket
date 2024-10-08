@@ -13,14 +13,14 @@
   .link-arrow {
     display: inline-block;
     content: '';
-    width: 10px;
-    height: 10px;
+    width: 6px;
+    height: 6px;
     margin: auto;
     transform: rotate(-45deg);
 
     &--color-text {
-      border-right: 3px solid #ff3e79;
-      border-bottom: 3px solid #ff3e79;
+      border-right: 3px solid $btnLinkPurple;
+      border-bottom: 3px solid $btnLinkPurple;
     }
   }
   &--margin {

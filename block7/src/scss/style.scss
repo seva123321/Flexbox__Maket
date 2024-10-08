@@ -9,7 +9,10 @@ $screen-lg: 768px;
 $screen-xl: 1140px;
 $screen-xxl: 1440px;
 $textColor: #1b1c21;
-$activeColor:  #7e7e82;
+$activeColor: #7e7e82;
+$whiteColor: #ffffff;
+$btnLinkPurple: #ff3e79;
+$colorLineLeft: #41f6d7;
 @import 'header';
 @import 'service';
 @import 'aside';
@@ -21,21 +24,6 @@ $activeColor:  #7e7e82;
 @import 'text_block';
 @import 'swiper';
 @import 'footer';
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
 
 html {
   box-sizing: border-box;
@@ -105,11 +93,13 @@ h3 {
 
 .srv--elem-pad {
   padding: 16px;
+
   @media screen and (min-width: 760px) {
     .srv--elem-pad {
       padding: 16px 24px;
     }
   }
+
   @media screen and (min-width: 1120px) {
     .srv--elem-pad {
       padding: 16px 32px;

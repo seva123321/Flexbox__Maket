@@ -18,7 +18,7 @@ ASIDES_LAYOUT.forEach((aside) => {
       aside.style.transform = `translateX(${sign * 400}vw)`;
     }
 
-    if (target.classList.contains("header__close")) {
+    if (target.classList.contains("header__close")&& (window.innerWidth < 1440)) {
       aside.style.transform = `translateX(${sign * 400}vw)`;
     }
   });

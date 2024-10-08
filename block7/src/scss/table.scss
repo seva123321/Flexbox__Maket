@@ -28,26 +28,26 @@
   &__link {
     display: inline;
     padding: 9px 21px;
-    background-color: #ff3e79;
+    background-color: $btnLinkPurple;
     border-radius: 16px 16px;
-    color: #ffffff;
+    color: $whiteColor;
     font-size: 12px;
     font-family: $fontBold;
     text-transform: uppercase;
     text-wrap: nowrap;
     letter-spacing: normal;
-  }
-  .link-arrow {
-    display: inline-block;
-    content: '';
-    width: 10px;
-    height: 10px;
-    margin: auto;
-    transform: rotate(-45deg);
-    
-    &--color-btn {
-      border-right: 3px solid #ffffff;
-      border-bottom: 3px solid #ffffff;
+    .link-arrow {
+      display: inline-block;
+      content: '';
+      width: 6px;
+      height: 6px;
+      margin: auto;
+      transform: rotate(-45deg);
+
+      &--color-btn {
+        border-right: 3px solid $whiteColor;
+        border-bottom: 3px solid $whiteColor;
+      }
     }
   }
 
@@ -55,13 +55,14 @@
     font-family: $fontMedium;
   }
   &__tbody {
-    background-color: #ffffff;
+    background-color: $whiteColor;
     border-radius: 10px 10px;
   }
   &__row-head {
     height: 65px;
     vertical-align: middle;
   }
+  
   &__row-body {
     height: 65px;
     vertical-align: middle;

@@ -4,7 +4,7 @@
 .aside {
   height: 100vh;
   display: flex;
-  background-color: #ffffff;
+  background-color: $whiteColor;
   flex-direction: column;
   justify-content: space-between;
   position: absolute;
@@ -59,6 +59,9 @@
         transform: translateX(0);
       }
     }
+    &--right-side {
+      transform: translateX(400vw);
+    }
   }
 
   &__header {
@@ -100,7 +103,6 @@
     }
   }
 
-
   &__link {
     padding: 12px 24px;
     position: relative;
@@ -108,13 +110,30 @@
     @media screen and (min-width: 380px) {
       padding: 16px 24px;
     }
+
     &:hover,
     &:focus {
       color: $activeColor;
     }
-    &:hover,
-    &:focus {
-      color: $activeColor;
+    &:hover::before,
+    &:focus::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto 0;
+      content: '';
+      display: inline-block;
+      display: inline-block;
+      width: 4px;
+      height: 32px;
+      background-color: $colorLineLeft;
+      -moz-border-top-right-radius: 70%;
+      border-top-right-radius: 70%;
+      -moz-border-bottom-right-radius: 70%;
+      border-bottom-right-radius: 70%;
+      margin-right: 16px;
     }
   }
 
@@ -146,14 +165,9 @@
     padding: 8px;
     font-family: $fontBold;
     font-size: 24px;
-  }
-
-  &__tel span {
-    margin-right: 5px;
-  }
-
-  &__layout--right-side {
-    transform: translateX(400vw);
+    & span {
+      margin-right: 5px;
+    }
   }
 
   &--chat {

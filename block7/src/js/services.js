@@ -1,58 +1,13 @@
-let srcImage = [
-  "Lenovo-logo",
-  "Samsung-logo",
-  "Apple-logo",
-  "ViewSonic-logo",
-  "Bosch-logo",
-  "Hp-logo",
-  "Acer-logo",
-  "Sony-logo",
-  "Lenovo-logo",
-  "Samsung-logo",
-  "Apple-logo",
-];
-
-let titleTechniqueName = [
-  "Ремонт ноутбуков",
-  "Ремонт планшетов",
-  "Ремонт ПК",
-  "Ремонт мониторов",
-  "Ремонт телефонов",
-  "Ремонт геймпадов",
-  "Ремонт телевизоров",
-];
-
-let servicesValuesPrice = [
-  { "Ремонтные услуги": "Диагностика", Цена: "Бесплатно", Срок: "30 мин" },
-  { "Ремонтные услуги": "Замена дисплея", Цена: "1000₽", Срок: "30-120 мин" },
-  {
-    "Ремонтные услуги": "Замена полифонического динамика",
-    Цена: "1000₽",
-    Срок: "30-120 мин",
-  },
-  {
-    "Ремонтные услуги": "Тестирование с выдачей технического заключения",
-    Цена: "1000₽",
-    Срок: "30-120 мин",
-  },
-  {
-    "Ремонтные услуги": "Замена программного обеспечения",
-    Цена: "1000₽",
-    Срок: "30-120 мин",
-  },
-];
+import { srcImage, titleTechniqueName, servicesValuesPrice } from "./source";
 
 const SOURCE = [srcImage, titleTechniqueName, servicesValuesPrice];
 let elemOffset = new Array(SOURCE.length).fill(0);
 
-// const SECTION = document.querySelector(".srv");
 const LIST_COMMON = document.querySelectorAll(".srv__list");
 const LIST_COMMON_SHOWMORE = document.querySelectorAll(".srv__list--showmore");
 const TEMPLATE_BRAND = document.querySelector("#brand-template");
 const TEMPLATE_TECHNIQUE = document.querySelector("#technique-template");
 const TEMPLATE_PRICE = document.querySelector("#price-template");
-let btnShowList = document.querySelector(".srv__show");
-// let shift = 0;
 
 for (let i = 0; i < srcImage.length; i++) {
   let clone = TEMPLATE_BRAND.content.cloneNode(true);

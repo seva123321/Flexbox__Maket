@@ -2,26 +2,26 @@
   &__header {
     text-transform: uppercase;
     padding: 16px 32px;
-    background: linear-gradient(50deg, #f8f8f8 0%, #ffffff 98.61%);
+    background: linear-gradient(50deg, #f8f8f8 0%, $whiteColor 98.61%);
   }
 
   &__wrapper {
     overflow: hidden;
     position: relative;
   }
+  
   &__list {
     list-style: none;
     display: flex;
     margin-bottom: 24px;
     transform: translate(0);
 
-    /* @media screen and (min-width: 330px) { */
     @media screen and (min-width: $screen-lg) {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
       grid-auto-flow: row;
       grid-gap: 16px 32px;
-      height: 180px;
+      height: 160px;
       overflow: hidden;
     }
 
@@ -34,15 +34,15 @@
     margin-right: 16px;
     display: flex;
     align-items: center;
-    background-color: #ffffff;
+    background-color: $whiteColor;
     border: 1px solid #eaeaea;
     border-radius: 10px 10px;
-    /* @media screen and (min-width: 330px) { */
+
     @media screen and (min-width: $screen-lg) {
       margin-right: 0;
       display: flex;
       align-items: center;
-      background-color: #ffffff;
+      background-color: $whiteColor;
       border: 1px solid #eaeaea;
       border-radius: 10px 10px;
     }
@@ -83,12 +83,14 @@
     height: fit-content;
     align-self: center;
   }
+
   &__go {
-    align-self: end;
+    align-self: flex-end;
     padding: 16px;
   }
 
   &__show {
+    display: flex;
     margin: 16px;
     cursor: pointer;
 
@@ -105,7 +107,7 @@
     }
 
     &--arrow--rotate {
-      transform: translateY(5px) rotate(180deg);
+      transform: rotate(180deg);
     }
 
     &--text {
@@ -118,7 +120,7 @@
 
   &__dt-dd--wrapper {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: space-between;
   }
 
