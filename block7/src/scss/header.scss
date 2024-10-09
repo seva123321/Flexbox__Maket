@@ -50,9 +50,9 @@
     }
   }
 
-  @media screen and (min-width: $screen-xxl) {
-    &__close--main {
-      display: none;
+  &__close--main {
+    @media screen and (min-width: $screen-xxl) {
+      display: none !important;
     }
   }
 }
